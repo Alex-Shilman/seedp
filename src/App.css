@@ -33,3 +33,16 @@
   width: 100px;
   height: 100px;
 }
+
+.DPConnectorView {
+  padding: 10px;
+}
+
+.DPConnector {
+  padding: 10px;
+  width: 100px;
+  height: 40px;
+  border: 2px solid red;
+  padding: 10px;
+  border-radius: 25px;
+}
