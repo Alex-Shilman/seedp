@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 
 class DPNode extends Component {
+  _handleClick = () => {
+    alert('Yo, what up!');
+  }
+
   render() {
     return (
       <div className="DPNode">
-        <img src={this.props.svg} />
+        <input type="image" src={this.props.svg} onClick={this.props.onDrillDown} />
       </div>
     );
   }
