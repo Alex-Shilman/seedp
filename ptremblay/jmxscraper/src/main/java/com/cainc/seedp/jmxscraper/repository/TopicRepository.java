@@ -34,7 +34,8 @@ public class TopicRepository {
             updateStatement.setString(1, kafkaTopic.getId());
             updateStatement.setString(2, kafkaTopic.getName());
             updateStatement.setString(3, kafkaTopic.getNodeId());
-            return updateStatement.execute();
+            updateStatement.execute();
+            return true;
         } catch (SQLException ex) {
             ex.printStackTrace();
             return false;

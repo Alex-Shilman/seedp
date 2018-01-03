@@ -26,11 +26,17 @@
       <version>${mysql.driver.version}</version>
     </dependency>
     <!-- Test -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
     <sourceDirectory>src/main/java</sourceDirectory>
-    <!--<testSourceDirectory>src/test/java</testSourceDirectory>-->
+    <testSourceDirectory>src/test/java</testSourceDirectory>
     <plugins>
     </plugins>
   </build>
