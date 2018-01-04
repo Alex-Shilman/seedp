@@ -9,9 +9,24 @@
 
 .App-header {
   background-color: #222;
-  height: 100px;
+  height: 60px;
   padding: 20px;
   color: white;
+}
+
+.App-footer {
+  background-color: #222;
+  height: 40px;
+  padding: 20px;
+  overflow: auto;
+  color: white;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #afafaf;
+  text-align: center;
 }
 
 .App-title {
@@ -50,7 +65,7 @@
   display: inline-block;
   position: absolute;
   left: 50px;
-  top: 180px;  
+  top: 120px;  
 }
 
 .dp-nodes {
