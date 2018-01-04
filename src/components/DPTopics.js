@@ -7,7 +7,7 @@ class DPTopics extends Component {
     return (
       <div className="DPTopics">
         <img src={pipe} alt="" />
-        <p className="topic-text"><br/><br/>{group.topics.join(', ')}</p>
+        <p className="topic-text"><br/>{group.topics.join(', ')}</p>
         <p className="error-text">{message}</p>
       </div>
     );
