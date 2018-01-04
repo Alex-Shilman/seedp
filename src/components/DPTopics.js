@@ -26,7 +26,7 @@ class DPTopics extends Component {
         <img src={pipe} alt="" />
         <p className="topic-text"><br/><Button  id={buttonId} onClick={this.toggle}>Topic Group:<br/>{group.dispName}</Button></p>
         <p className="error-text">{message}</p>
-        <Popover placement="bottom" isOpen={this.state.popoverOpen} target={buttonId} toggle={this.toggle}>
+        <Popover placement="left" isOpen={this.state.popoverOpen} target={buttonId} toggle={this.toggle}>
           <PopoverHeader>Topics in Group</PopoverHeader>
           <PopoverBody>{group.topics.join(', ')}</PopoverBody>
         </Popover>
