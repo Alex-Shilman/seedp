@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { Container } from 'reactstrap';
 import DPConnectorView from './components/DPConnectorView';
 import DPNodeView from './components/DPNodeView';
 import { subscribeToTimer, subscribeToData } from './api';
+import 'bootstrap/dist/css/bootstrap.css'
 import './App.css';
 
 const connectors = [
@@ -41,13 +43,15 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">DATA PLATFORM DASHBOARD {timestamp}</h1>
         </header>
-        {this.state.displayConnectors ?
-          <DPConnectorView connectors={connectors} onDrillUp={this._handleDrillUp} /> :
-          <DPNodeView onDrillDown={this._handleDrillDown} />
-        }
-        <header className="App-footer">
+        <Container>
+          {this.state.displayConnectors ?
+            <DPConnectorView connectors={connectors} onDrillUp={this._handleDrillUp} /> :
+            <DPNodeView onDrillDown={this._handleDrillDown} />
+          }
+        </Container>
+        <footer className="App-footer">
           <p>{JSON.stringify(data)}</p>
-        </header>
+        </footer>
       </div>
     );
   }
