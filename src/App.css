@@ -119,9 +119,9 @@
   padding: 3px;
   width: 100px;
   height: auto;
-  border: 2px solid red;
   padding: 10px;
-  border-radius: 25px;
+  /* border: 2px solid red;
+  border-radius: 25px; */
 }
 
 .DPTopics {
@@ -131,6 +131,19 @@
   height: auto;
   border: 2px solid blue;
   padding: 10px;
+}
+
+.empty-div {
+  display: table-cell;
+}
+
+.topic-text {
+  font-size: 1em;
+}
+
+.error-text {
+  color: red;
+  font-size: 1em;
 }
 
 .arrow-style {
