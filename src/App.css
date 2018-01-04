@@ -100,6 +100,7 @@
 
 .DPConnectorView {
   padding: 10px;
+  overflow: auto;
 }
 
 .dp-connectors-container {
@@ -119,9 +120,9 @@
   padding: 3px;
   width: 100px;
   height: auto;
-  border: 2px solid red;
   padding: 10px;
-  border-radius: 25px;
+  /* border: 2px solid red;
+  border-radius: 25px; */
 }
 
 .DPTopics {
@@ -129,8 +130,26 @@
   padding: 3px;
   width: 200px;
   height: auto;
-  border: 2px solid blue;
   padding: 10px;
+  /* border: 2px solid blue; */
+  position: relative;
+}
+
+.empty-div {
+  display: table-cell;
+}
+
+.topic-text {
+  font-size: 1em;
+  position: absolute;
+  top: 0;
+  margin-left: 20px;
+  margin-right: 60px;
+}
+
+.error-text {
+  color: red;
+  font-size: 1em;
 }
 
 .arrow-style {
