@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 import DPConnectorView from './components/DPConnectorView';
-import DPNode from './components/DPNode';
-import logo from './logo.svg';
-import kafka from './assets/kafka.svg';
-import datalake from './assets/nosqldb.svg';
-import memsql from './assets/db.svg';
-import server from './assets/server.svg';
-import arrow from './assets/arrow.svg';
+import DPNodeView from './components/DPNodeView';
 import './App.css';
 
 class App extends Component {
@@ -33,15 +27,7 @@ class App extends Component {
         </header>
         {this.state.displayConnectors ?
           <DPConnectorView onDrillUp={this._handleDrillUp} /> :
-          <p className="App-intro">
-            <DPNode svg={kafka} onDrillDown={this._handleDrillDown} />
-            <DPNode svg={arrow} />
-            <DPNode svg={datalake} />
-            <DPNode svg={arrow} />
-            <DPNode svg={memsql} />
-            <DPNode svg={arrow} />
-            <DPNode svg={server} />
-          </p>
+          <DPNodeView onDrillDown={this._handleDrillDown} />
         }
       </div>
     );

@@ -9,7 +9,7 @@
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 100px;
   padding: 20px;
   color: white;
 }
@@ -27,8 +27,63 @@
   to { transform: rotate(360deg); }
 }
 
-.DPNode {
+.vertical-text {
+  position: relative;
+	transform: rotate(90deg);
+  transform-origin: left top 0;
+  font-size: 1.2em;
+  align-content: center;
+  white-space: nowrap;
+  position: absolute;
+  left: 50px;
+  top: 180px;  
+}
+
+.DPNodeView {
+  padding: 10px;
+}
+
+.iready {
+  width: 80px;
+  height: 500px;
+  background-color: #f47969;
   display: inline-block;
+  position: absolute;
+  left: 50px;
+  top: 180px;  
+}
+
+.dp-nodes {
+  width: 90%;
+  height: 500px;
+  display: inline-block;
+}
+
+.dp-nodes-container {
+  width: 90%;
+  height: 500px;
+  display: table;
+}
+
+.dp-nodes-container {
+  width: 90%;
+  height: 500px;
+  display: table;
+}
+
+.dp-nodes-row {
+  display: table-row;
+}
+
+.DPNode {
+  display: table-cell;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.DPArrow {
+  display: table-cell;
   padding: 10px;
   width: 100px;
   height: 100px;
@@ -40,9 +95,25 @@
 
 .DPConnector {
   padding: 10px;
-  width: 100px;
-  height: 40px;
+  width: 200px;
+  height: 80px;
   border: 2px solid red;
   padding: 10px;
   border-radius: 25px;
+}
+
+.arrow-rotate90 {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.arrow-rotate180 {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
