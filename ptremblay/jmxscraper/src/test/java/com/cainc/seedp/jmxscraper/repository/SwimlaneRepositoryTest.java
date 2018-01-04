@@ -10,15 +10,14 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.cainc.seedp.jmxscraper.model.Topic;
+import com.cainc.seedp.jmxscraper.model.Swimlane;
 
-public class TopicRepositoryTest {
+public class SwimlaneRepositoryTest {
 
     private Connection connection;
-    private TopicRepository objectUnderTest;
+    private SwimlaneRepository objectUnderTest;
 
-    private String testId = "test_id";
-
+    private int testId = 12345;
 
     @Before
     public void setUp() {
@@ -30,7 +29,7 @@ public class TopicRepositoryTest {
         connection = MySQLConnectionFactory.getConnection(hostname, schema, username, password);
         cleanUpTestRecords();
 
-        objectUnderTest = new TopicRepository(connection);
+        objectUnderTest = new SwimlaneRepository(connection);
     }
 
     @After
@@ -39,33 +38,29 @@ public class TopicRepositoryTest {
     }
 
     @Test
-    public void testTopicInsert() {
+    public void testSwimlaneInsert() {
         // given
-        Topic testTopic = new Topic();
-        testTopic.setId(testId);
-        testTopic.setName("test_name");
-        testTopic.setNodeId("test_node_id");
-        testTopic.setTopicGroupId("test_topic_group_id");
+        Swimlane testSwimlane = new Swimlane();
+        testSwimlane.setId(testId);
+        testSwimlane.setData("{\"foo\":\"bar\"}");
 
         // when
-        boolean actualPersisted = objectUnderTest.updateTopic(testTopic);
+        boolean actualPersisted = objectUnderTest.updateSwimlane(testSwimlane);
 
         // then
         assertTrue(actualPersisted);
     }
 
     @Test
-    public void testTopicUpsert() {
+    public void testSwimlaneUpsert() {
         // given
-        Topic testTopic = new Topic();
-        testTopic.setId(testId);
-        testTopic.setName("test_name");
-        testTopic.setNodeId("test_node_id");
-        testTopic.setTopicGroupId("test_topic_group_id");
+        Swimlane testSwimlane = new Swimlane();
+        testSwimlane.setId(testId);
+        testSwimlane.setData("{\"foo\":\"bar\"}");
 
         // when
-        objectUnderTest.updateTopic(testTopic);
-        boolean actualPersistedAgain = objectUnderTest.updateTopic(testTopic);
+        objectUnderTest.updateSwimlane(testSwimlane);
+        boolean actualPersistedAgain = objectUnderTest.updateSwimlane(testSwimlane);
 
         // then
         assertTrue(actualPersistedAgain);
@@ -73,9 +68,9 @@ public class TopicRepositoryTest {
 
     private void cleanUpTestRecords() {
         try {
-            String deleteStatementStr = "DELETE FROM tbl_topic WHERE id = ?";
+            String deleteStatementStr = "DELETE FROM tbl_swimlanes WHERE id = ?";
             PreparedStatement deleteTestTecord = connection.prepareStatement(deleteStatementStr);
-            deleteTestTecord.setString(1, testId);
+            deleteTestTecord.setInt(1, testId);
             deleteTestTecord.execute();
         } catch (SQLException ex) {
             ex.printStackTrace();
