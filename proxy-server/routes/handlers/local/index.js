@@ -1,1 +1,1 @@
-export * from './getSchools';
+export * from './getData';

@@ -1,51 +1,55 @@
 import React, { Component } from 'react';
 import DPConnectorView from './components/DPConnectorView';
-import DPNode from './components/DPNode';
-import logo from './logo.svg';
-import kafka from './assets/kafka.svg';
-import datalake from './assets/nosqldb.svg';
-import memsql from './assets/db.svg';
-import server from './assets/server.svg';
-import arrow from './assets/arrow.svg';
+import DPNodeView from './components/DPNodeView';
+import { subscribeToTimer, subscribeToData } from './api';
 import './App.css';
 
+const connectors = [
+  { name: "iready_dbz" },
+  { name: "lessons_dbz" },
+];
+
 class App extends Component {
+  
+  state = {
+    displayConnectors: false,
+    timestamp: 0,
+    data: null
+  }
+  
   constructor(props) {
     super(props);
-    this.state = {
-      displayConnectors: false
-    }
+    subscribeToData((err, payload) => {
+      this.setState({ data: payload });
+      console.log(payload)
+    });
+    subscribeToTimer((err, timestamp) => this.setState({timestamp}));
   }
-
+  
   _handleDrillDown = () => {
-    this.setState({ displayConnectors: true });
+    this.setState({displayConnectors: true});
   }
-
+  
   _handleDrillUp = () => {
-    this.setState({ displayConnectors: false });
+    this.setState({displayConnectors: false});
   }
-
+  
   render() {
+    const {timestamp, data} = this.state;
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">DATA PLATFORM DASHBOARD</h1>
+          <h1 className="App-title">DATA PLATFORM DASHBOARD {timestamp}</h1>
         </header>
         {this.state.displayConnectors ?
-          <DPConnectorView onDrillUp={this._handleDrillUp} /> :
-          <p className="App-intro">
-            <DPNode svg={kafka} onDrillDown={this._handleDrillDown} />
-            <DPNode svg={arrow} />
-            <DPNode svg={datalake} />
-            <DPNode svg={arrow} />
-            <DPNode svg={memsql} />
-            <DPNode svg={arrow} />
-            <DPNode svg={server} />
-          </p>
+          <DPConnectorView connectors={connectors} onDrillUp={this._handleDrillUp} /> :
+          <DPNodeView onDrillDown={this._handleDrillDown} />
         }
+        <header className="App-footer">
+          <p>{JSON.stringify(data)}</p>
+        </header>
       </div>
     );
   }
 }
-
 export default App;

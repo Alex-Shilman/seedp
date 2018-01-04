@@ -9,9 +9,24 @@
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 60px;
   padding: 20px;
   color: white;
+}
+
+.App-footer {
+  background-color: #222;
+  height: 40px;
+  padding: 20px;
+  overflow: auto;
+  color: white;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #afafaf;
+  text-align: center;
 }
 
 .App-title {
@@ -27,22 +42,114 @@
   to { transform: rotate(360deg); }
 }
 
-.DPNode {
+.vertical-text {
+  position: relative;
+	transform: rotate(90deg);
+  transform-origin: left top 0;
+  font-size: 1.2em;
+  align-content: center;
+  white-space: nowrap;
+  position: absolute;
+  left: 50px;
+  top: 180px;  
+}
+
+.DPNodeView {
+  padding: 10px;
+}
+
+.iready {
+  width: 80px;
+  height: 500px;
+  background-color: #f47969;
   display: inline-block;
+  position: absolute;
+  left: 50px;
+  top: 120px;  
+}
+
+.dp-nodes {
+  width: 90%;
+  height: 500px;
+  display: inline-block;
+}
+
+.dp-nodes-container {
+  width: 90%;
+  height: 500px;
+  display: table;
+}
+
+.dp-nodes-row {
+  display: table-row;
+}
+
+.DPNode {
+  display: table-cell;
+  padding: 10px;
+  width: 120px;
+  height: 120px;
+}
+
+.DPArrow {
+  display: table-cell;
   padding: 10px;
   width: 100px;
-  height: 100px;
+  height: auto;
 }
 
 .DPConnectorView {
   padding: 10px;
 }
 
+.dp-connectors-container {
+  width: 90%;
+  display: table;
+  padding: 5px;
+}
+
+.dp-connectors-row {
+  display: table-row;
+  padding: 5px;
+  height: auto;
+}
+
 .DPConnector {
-  padding: 10px;
+  display: table-cell;
+  padding: 3px;
   width: 100px;
-  height: 40px;
+  height: auto;
   border: 2px solid red;
   padding: 10px;
   border-radius: 25px;
+}
+
+.DPTopics {
+  display: table-cell;
+  padding: 3px;
+  width: 200px;
+  height: auto;
+  border: 2px solid blue;
+  padding: 10px;
+}
+
+.arrow-style {
+  width: 120px;
+  height: 40px;
+}
+
+.arrow-rotate90 {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.arrow-rotate180 {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
