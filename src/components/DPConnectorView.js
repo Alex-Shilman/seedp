@@ -1,9 +1,15 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import DPArrow from './DPArrow';
 import DPConnector from './DPConnector';
 import DPTopics from './DPTopics';
 import { loadData } from '../redux/actions';
+import sourceImage from '../assets/source.svg';
+import sinkImage from '../assets/sink.svg';
+
+// TODO: switch to this.props.data when ready
+import swimlanesData from './swimlanes';
 
 class DPConnectorView extends Component {
   componentWillMount() {
@@ -11,22 +17,28 @@ class DPConnectorView extends Component {
     loadData({test: 1});
   }
   
-  _renderConnectorRow = (connector) => (
-    <div className="dp-connectors-row">
-      <DPConnector name={connector.name} />
-      <DPArrow />
-      <DPTopics />
-      <DPArrow />
-      <DPConnector name={connector.name} />
-    </div>
-  );
+  _renderConnectorRow = (swimlane) => {
+    const source = _.get(swimlanesData.connectors, swimlane.sourceConnectorKey);
+    const sink = _.get(swimlanesData.connectors, swimlane.sinkConnectorKey);
+    const group  = _.get(swimlanesData.topicGroups, swimlane.topicGroupKey);
+    
+    return (
+      <div className="dp-connectors-row" key={swimlane.topicGroupKey} >
+        { source ? <DPConnector name={source.dispName} image={sourceImage} /> : <div className="empty-div" /> }
+        { source ? <DPArrow /> : <div className="empty-div" /> }
+        <DPTopics group={group} message={swimlane.warnMessage} />
+        { sink ? <DPArrow /> : <div className="empty-div" /> }
+        { sink ? <DPConnector name={sink.dispName} image={sinkImage} /> : <div className="empty-div" /> }
+      </div>
+    );
+  };
 
   render() {
     return (
       <div className="DPConnectorView">
         <button onClick={this.props.onDrillUp} >Back</button>
         <div className="dp-connectors-container">
-          {this.props.connectors.map((connector) => this._renderConnectorRow(connector) )}
+          {swimlanesData.swimlanes.map((swimlane) => this._renderConnectorRow(swimlane) )}
         </div>
       </div>
     );
