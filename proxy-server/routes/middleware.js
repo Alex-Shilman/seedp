@@ -11,6 +11,7 @@ module.exports = ({ ...options }) => (req, res, next) => {
   const { originalUrl, body: { method } } = req;
   const { type, handler } = utils.getRPCHandler(originalUrl.substr(1), method);
   /* Generate API_ENDPOINT_URL for next middleware */
+  res.locals.mysqlConnection = options.mysqlConnection;
   res.locals.API_ENDPOINT_URL = `${API_URL[type]}${originalUrl}`;
   /* Execute middlewares sequencially */
   async.series(utils.rebindMiddlewareHandlers([].concat(handler), req, res), err => {
