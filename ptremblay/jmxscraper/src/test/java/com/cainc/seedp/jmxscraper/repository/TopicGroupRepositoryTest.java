@@ -10,15 +10,14 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.cainc.seedp.jmxscraper.model.Topic;
+import com.cainc.seedp.jmxscraper.model.TopicGroup;
 
-public class TopicRepositoryTest {
+public class TopicGroupRepositoryTest {
 
     private Connection connection;
-    private TopicRepository objectUnderTest;
+    private TopicGroupRepository objectUnderTest;
 
     private String testId = "test_id";
-
 
     @Before
     public void setUp() {
@@ -30,7 +29,7 @@ public class TopicRepositoryTest {
         connection = MySQLConnectionFactory.getConnection(hostname, schema, username, password);
         cleanUpTestRecords();
 
-        objectUnderTest = new TopicRepository(connection);
+        objectUnderTest = new TopicGroupRepository(connection);
     }
 
     @After
@@ -39,33 +38,30 @@ public class TopicRepositoryTest {
     }
 
     @Test
-    public void testTopicInsert() {
+    public void testTopicGroupInsert() {
         // given
-        Topic testTopic = new Topic();
-        testTopic.setId(testId);
-        testTopic.setName("test_name");
-        testTopic.setNodeId("test_node_id");
-        testTopic.setTopicGroupId("test_topic_group_id");
+        TopicGroup testGroup = new TopicGroup();
+        testGroup.setId(testId);
+        testGroup.setDisplayName("test-topic-group");
 
         // when
-        boolean actualPersisted = objectUnderTest.updateTopic(testTopic);
+        boolean actualPersisted = objectUnderTest.updateTopicGroup(testGroup);
 
         // then
         assertTrue(actualPersisted);
     }
 
+
     @Test
-    public void testTopicUpsert() {
+    public void testTopicGroupUpsert() {
         // given
-        Topic testTopic = new Topic();
-        testTopic.setId(testId);
-        testTopic.setName("test_name");
-        testTopic.setNodeId("test_node_id");
-        testTopic.setTopicGroupId("test_topic_group_id");
+        TopicGroup testGroup = new TopicGroup();
+        testGroup.setId(testId);
+        testGroup.setDisplayName("test-topic-group");
 
         // when
-        objectUnderTest.updateTopic(testTopic);
-        boolean actualPersistedAgain = objectUnderTest.updateTopic(testTopic);
+        objectUnderTest.updateTopicGroup(testGroup);
+        boolean actualPersistedAgain = objectUnderTest.updateTopicGroup(testGroup);
 
         // then
         assertTrue(actualPersistedAgain);
@@ -73,7 +69,7 @@ public class TopicRepositoryTest {
 
     private void cleanUpTestRecords() {
         try {
-            String deleteStatementStr = "DELETE FROM tbl_topic WHERE id = ?";
+            String deleteStatementStr = "DELETE FROM tbl_topic_group WHERE id = ?";
             PreparedStatement deleteTestTecord = connection.prepareStatement(deleteStatementStr);
             deleteTestTecord.setString(1, testId);
             deleteTestTecord.execute();

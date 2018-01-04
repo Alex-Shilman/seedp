@@ -26,7 +26,7 @@ class DPConnectorView extends Component {
       <div className="dp-connectors-row" key={swimlane.topicGroupKey} >
         { source ? <DPConnector name={source.dispName} image={sourceImage} /> : <div className="empty-div" /> }
         { source ? <DPArrow /> : <div className="empty-div" /> }
-        <DPTopics group={group} message={swimlane.warnMessage} />
+        <DPTopics group={group} message={swimlane.warnMessage} name={swimlane.topicGroupKey} />
         { sink ? <DPArrow /> : <div className="empty-div" /> }
         { sink ? <DPConnector name={sink.dispName} image={sinkImage} /> : <div className="empty-div" /> }
       </div>

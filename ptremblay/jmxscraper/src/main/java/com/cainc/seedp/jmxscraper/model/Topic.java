@@ -5,6 +5,7 @@ public class Topic {
     private String id;
     private String name;
     private String nodeId;
+    private String topicGroupId;
 
 
     public String getId() {
@@ -29,5 +30,13 @@ public class Topic {
 
     public void setNodeId(String nodeId) {
         this.nodeId = nodeId;
+    }
+
+    public String getTopicGroupId() {
+        return topicGroupId;
+    }
+
+    public void setTopicGroupId(String topicGroupId) {
+        this.topicGroupId = topicGroupId;
     }
 }
