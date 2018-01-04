@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Container } from 'reactstrap';
 import DPConnectorView from './components/DPConnectorView';
+import Timer from './components/Timer';
 import DPNodeView from './components/DPNodeView';
-import { subscribeToTimer, subscribeToData } from './api';
+import { subscribeToData } from './api';
 import 'bootstrap/dist/css/bootstrap.css'
 import './App.css';
 
@@ -15,7 +16,6 @@ class App extends Component {
   
   state = {
     displayConnectors: false,
-    timestamp: 0,
     data: null
   }
   
@@ -25,7 +25,6 @@ class App extends Component {
       this.setState({ data: payload });
       console.log(payload)
     });
-    subscribeToTimer((err, timestamp) => this.setState({timestamp}));
   }
   
   _handleDrillDown = () => {
@@ -41,7 +40,10 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">DATA PLATFORM DASHBOARD {timestamp}</h1>
+          <h1 className="App-title">
+            DATA PLATFORM DASHBOARD
+            <Timer />
+          </h1>
         </header>
         <Container>
           {this.state.displayConnectors ?

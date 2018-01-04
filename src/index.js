@@ -9,7 +9,7 @@ import registerServiceWorker from './registerServiceWorker';
 const store = configureStore({});
 const root = document.getElementById('root');
 const AppWrapper = ({store}) => (
-  <main>
+  <main className="wrapper">
     <Provider store={store}>
       <App />
     </Provider>
