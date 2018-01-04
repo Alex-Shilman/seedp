@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 
 class DPNode extends Component {
-  _handleClick = () => {
-    alert('Yo, what up!');
-  }
-
   render() {
     return (
       <div className="DPNode">
