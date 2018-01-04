@@ -1,5 +1,6 @@
 package com.cainc.seedp.jmxscraper.repository;
 
+
 import static org.junit.Assert.*;
 
 import java.sql.Connection;
@@ -10,14 +11,15 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.cainc.seedp.jmxscraper.model.Topic;
+import com.cainc.seedp.jmxscraper.model.ConnectorToTopic;
 
-public class TopicRepositoryTest {
+public class ConnectorToTopicRepositoryTest {
 
     private Connection connection;
-    private TopicRepository objectUnderTest;
+    private ConnectorToTopicRepository objectUnderTest;
 
-    private String testId = "test_id";
+    private String testConnectorId = "test_connector_id";
+    private String testTopicId = "test_topic_id";
 
 
     @Before
@@ -30,7 +32,7 @@ public class TopicRepositoryTest {
         connection = MySQLConnectionFactory.getConnection(hostname, schema, username, password);
         cleanUpTestRecords();
 
-        objectUnderTest = new TopicRepository(connection);
+        objectUnderTest = new ConnectorToTopicRepository(connection);
     }
 
     @After
@@ -38,32 +40,32 @@ public class TopicRepositoryTest {
         cleanUpTestRecords();
     }
 
+
     @Test
-    public void testTopicInsert() {
+    public void testConnectorTopicLinkInsert() {
         // given
-        Topic testTopic = new Topic();
-        testTopic.setId(testId);
-        testTopic.setName("test_name");
-        testTopic.setNodeId("test_node_id");
+        ConnectorToTopic testLink = new ConnectorToTopic();
+        testLink.setConnectorId(testConnectorId);
+        testLink.setTopicId(testTopicId);
 
         // when
-        boolean actualPersisted = objectUnderTest.updateTopic(testTopic);
+        boolean actualPersisted = objectUnderTest.updateConnectorToTopic(testLink);
 
         // then
         assertTrue(actualPersisted);
     }
 
+
     @Test
-    public void testTopicUpsert() {
+    public void testConnectorTopicLinkUpsert() {
         // given
-        Topic testTopic = new Topic();
-        testTopic.setId(testId);
-        testTopic.setName("test_name");
-        testTopic.setNodeId("test_node_id");
+        ConnectorToTopic testLink = new ConnectorToTopic();
+        testLink.setConnectorId(testConnectorId);
+        testLink.setTopicId(testTopicId);
 
         // when
-        objectUnderTest.updateTopic(testTopic);
-        boolean actualPersistedAgain = objectUnderTest.updateTopic(testTopic);
+        objectUnderTest.updateConnectorToTopic(testLink);
+        boolean actualPersistedAgain = objectUnderTest.updateConnectorToTopic(testLink);
 
         // then
         assertTrue(actualPersistedAgain);
@@ -71,9 +73,10 @@ public class TopicRepositoryTest {
 
     private void cleanUpTestRecords() {
         try {
-            String deleteStatementStr = "DELETE FROM tbl_topic WHERE id = ?";
+            String deleteStatementStr = "DELETE FROM tbl_connector_topic WHERE connector_id = ? AND topic_id = ?";
             PreparedStatement deleteTestTecord = connection.prepareStatement(deleteStatementStr);
-            deleteTestTecord.setString(1, testId);
+            deleteTestTecord.setString(1, testConnectorId);
+            deleteTestTecord.setString(2, testTopicId);
             deleteTestTecord.execute();
         } catch (SQLException ex) {
             ex.printStackTrace();

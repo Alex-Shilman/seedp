@@ -1,6 +1,6 @@
 package com.cainc.seedp.jmxscraper.model;
 
-public class KafkaTopic {
+public class Topic {
 
     private String id;
     private String name;

@@ -10,15 +10,14 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.cainc.seedp.jmxscraper.model.Topic;
+import com.cainc.seedp.jmxscraper.model.Schema;
 
-public class TopicRepositoryTest {
+public class SchemaRepositoryTest {
 
     private Connection connection;
-    private TopicRepository objectUnderTest;
+    private SchemaRepository objectUnderTest;
 
     private String testId = "test_id";
-
 
     @Before
     public void setUp() {
@@ -30,7 +29,7 @@ public class TopicRepositoryTest {
         connection = MySQLConnectionFactory.getConnection(hostname, schema, username, password);
         cleanUpTestRecords();
 
-        objectUnderTest = new TopicRepository(connection);
+        objectUnderTest = new SchemaRepository(connection);
     }
 
     @After
@@ -39,31 +38,34 @@ public class TopicRepositoryTest {
     }
 
     @Test
-    public void testTopicInsert() {
+    public void testSchemaInsert() {
         // given
-        Topic testTopic = new Topic();
-        testTopic.setId(testId);
-        testTopic.setName("test_name");
-        testTopic.setNodeId("test_node_id");
+        Schema testSchema = new Schema();
+        testSchema.setId(testId);
+        testSchema.setHostname("test-hostname");
+        testSchema.setName("test-name");
+        // TODO include health field once present
 
         // when
-        boolean actualPersisted = objectUnderTest.updateTopic(testTopic);
+        boolean actualPersisted = objectUnderTest.updateSchema(testSchema);
 
         // then
         assertTrue(actualPersisted);
     }
 
+
     @Test
-    public void testTopicUpsert() {
+    public void testSchemaUpsert() {
         // given
-        Topic testTopic = new Topic();
-        testTopic.setId(testId);
-        testTopic.setName("test_name");
-        testTopic.setNodeId("test_node_id");
+        Schema testSchema = new Schema();
+        testSchema.setId(testId);
+        testSchema.setHostname("test-hostname");
+        testSchema.setName("test-name");
+        // TODO include health field once present
 
         // when
-        objectUnderTest.updateTopic(testTopic);
-        boolean actualPersistedAgain = objectUnderTest.updateTopic(testTopic);
+        objectUnderTest.updateSchema(testSchema);
+        boolean actualPersistedAgain = objectUnderTest.updateSchema(testSchema);
 
         // then
         assertTrue(actualPersistedAgain);
@@ -71,7 +73,7 @@ public class TopicRepositoryTest {
 
     private void cleanUpTestRecords() {
         try {
-            String deleteStatementStr = "DELETE FROM tbl_topic WHERE id = ?";
+            String deleteStatementStr = "DELETE FROM tbl_databases WHERE id = ?";
             PreparedStatement deleteTestTecord = connection.prepareStatement(deleteStatementStr);
             deleteTestTecord.setString(1, testId);
             deleteTestTecord.execute();
