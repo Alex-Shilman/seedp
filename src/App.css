@@ -46,3 +46,28 @@
   padding: 10px;
   border-radius: 25px;
 }
+
+
+@-webkit-keyframes dash {
+ to {
+   stroke-dashoffset: 800;
+ }
+}
+
+.path {
+ /*-webkit-animation: dash 30s linear infinite;
+ stroke-dasharray: 8;*/
+}
+
+.cls-1,
+
+.cls-2 {
+  fill:none;
+  stroke:#231f20;
+  stroke-miterlimit:10;
+  }
+
+  .cls-1 {
+    -webkit-animation: dash 30s reverse linear infinite;
+    stroke-dasharray:6;
+  }

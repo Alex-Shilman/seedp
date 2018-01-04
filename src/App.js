@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import DPConnectorView from './components/DPConnectorView';
+import Arrow from './components/arrow/Arrow';
 import DPNode from './components/DPNode';
 import logo from './logo.svg';
 import kafka from './assets/kafka.svg';
