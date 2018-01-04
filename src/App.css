@@ -100,6 +100,7 @@
 
 .DPConnectorView {
   padding: 10px;
+  overflow: auto;
 }
 
 .dp-connectors-container {
@@ -129,8 +130,9 @@
   padding: 3px;
   width: 200px;
   height: auto;
-  border: 2px solid blue;
   padding: 10px;
+  /* border: 2px solid blue; */
+  position: relative;
 }
 
 .empty-div {
@@ -139,6 +141,10 @@
 
 .topic-text {
   font-size: 1em;
+  position: absolute;
+  top: 0;
+  margin-left: 20px;
+  margin-right: 60px;
 }
 
 .error-text {
