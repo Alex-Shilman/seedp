@@ -11,7 +11,7 @@ const API_PORT = process.env.PORT || process.argv[2] || 8080;
 const dist = `${__dirname}/../../dist`;
 
 export default class {
-  static init({ sessionSecret, routes }) {
+  static init({ sessionSecret, routes, sessionStore }) {
     this.app = express();
     this.app.set('port', this._normalizePort(API_PORT));
     this.app.use(logger('dev'));
@@ -27,6 +27,7 @@ export default class {
         secret: sessionSecret,
         resave: true,
         saveUninitialized: true,
+        store: sessionStore,
       }),
     );
     this._setRoutes(routes);
@@ -35,7 +36,9 @@ export default class {
   }
 
   static _setRoutes(routes) {
-    const options = {};
+    const options = {
+      mysqlConnection: this.mysqlConnection
+    };
     routes.forEach(route => this.app.use(route.url, route.handler(options)));
   }
 
@@ -81,3 +84,4 @@ export default class {
     return false;
   }
 }
+

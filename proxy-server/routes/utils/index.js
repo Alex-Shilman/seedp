@@ -33,40 +33,9 @@ export default class {
    *  @param method {String}
    * */
   static getRPCHandler(path, method) {
-    let handler;
-    const paths = Object.keys(rpcHandlers);
-    // sort paths, longest first since we have no other order in rpcHandlers, and we want to allow wild card catch alls
-    // we wouldn't need to do this if rpcHandlers was an ordered array
-    paths.sort((a, b) => {
-      let c = 0;
-      if (a.length > b.length) {
-        c = -1;
-      } else if (a.length < b.length) {
-        c = 1;
-      }
-      return c;
-    });
-    // get all the RPC paths that match the input path
-    const matchedPaths = paths.filter(rpcPath =>
-      new RegExp(rpcPath.replace(/\*/g, '.*')).test(path),
+    return (
+      _.find(rpcHandlers[path], o => ~[...o.methods].indexOf(method)) || _.find(rpcHandlers['*'])
     );
-    // find the first handler that matches the path (+ method if supplied)
-    matchedPaths.forEach(matchedPath => {
-      if (!handler) {
-        // handlers is an array of handlers for this path
-        const handlers = rpcHandlers[matchedPath];
-        // if it's a catch-all, it has no methods
-        // if it's a catch-all, we just want the first handler that matches the path
-        // else, we want the first handler that can handle the method
-        handler = _.find(handlers, ({ methods }) => !methods || methods.includes(method));
-      }
-    });
-    if (!handler) {
-      throw new Error(`Could not find handler for path: ${path} and method: ${method}`);
-    } else if (!handler.handler) {
-      throw new Error(`No method defined on handler: ${JSON.stringify(handler)}`);
-    }
-    return handler;
   }
   /**
    *  getCookie Method
