@@ -4,16 +4,23 @@ import DPNodeView from './components/DPNodeView';
 import { subscribeToTimer, subscribeToData } from './api';
 import './App.css';
 
+const connectors = [
+  { name: "iready_dbz" },
+  { name: "lessons_dbz" },
+];
+
 class App extends Component {
   
   state = {
     displayConnectors: false,
-    timestamp: 0
+    timestamp: 0,
+    data: null
   }
   
   constructor(props) {
     super(props);
     subscribeToData((err, payload) => {
+      this.setState({ data: payload });
       console.log(payload)
     });
     subscribeToTimer((err, timestamp) => this.setState({timestamp}));
@@ -28,16 +35,19 @@ class App extends Component {
   }
   
   render() {
-    const {timestamp} = this.state;
+    const {timestamp, data} = this.state;
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">DATA PLATFORM DASHBOARD {timestamp}</h1>
         </header>
         {this.state.displayConnectors ?
-          <DPConnectorView onDrillUp={this._handleDrillUp}/> :
-          <DPNodeView onDrillDown={this._handleDrillDown}/>
+          <DPConnectorView connectors={connectors} onDrillUp={this._handleDrillUp} /> :
+          <DPNodeView onDrillDown={this._handleDrillDown} />
         }
+        <header className="App-footer">
+          <p>{JSON.stringify(data)}</p>
+        </header>
       </div>
     );
   }
