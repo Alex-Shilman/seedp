@@ -5,8 +5,9 @@
   "main": "index.js",
   "config": {},
   "scripts": {
+    "start": "DEBUG=\"express-server\" babel-node ./",
     "babel-node": "babel-node --presets=latest",
-    "start": "DEBUG=\"express-server\" nodemon --exec npm run babel-node -- ./",
+    "start-nodemon": "DEBUG=\"express-server\" nodemon --exec npm run babel-node -- ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "CAINC",
