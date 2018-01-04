@@ -45,9 +45,6 @@ class App extends Component {
           <DPConnectorView connectors={connectors} onDrillUp={this._handleDrillUp} /> :
           <DPNodeView onDrillDown={this._handleDrillDown} />
         }
-        <header className="App-footer">
-          <p>{JSON.stringify(data)}</p>
-        </header>
       </div>
     );
   }
