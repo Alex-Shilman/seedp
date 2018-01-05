@@ -1,0 +1,14 @@
+{
+    "secret": "CA:asdffqwere9234355",
+    "my_sql": {
+        "host": "10.25.1.123",
+        "user": "ireadyRW",
+        "password": "readwrite",
+        "database": "seedp"
+    },
+    "redis": {
+        "host": "localhost",
+        "port": 6379,
+        "ttl": 28800
+    }
+}

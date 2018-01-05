@@ -1,0 +1,18 @@
+.dbIcons {
+  font-size:18px;
+  font-family:Futura;
+  text-transform: uppercase;
+  width:100px;
+}
+
+.dbIcon-lines{
+    fill:#231f20;
+}
+
+.dbIcon-label.healthy,.dbIcon-status.healthy,.dbIcon-color.healthy{
+    fill:#2bb673;
+}
+
+.dbIcon-label.warning,.dbIcon-status.warning,.dbIcon-color.warning{
+    fill:#e35761;
+}
