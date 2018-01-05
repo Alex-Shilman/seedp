@@ -25,7 +25,7 @@
   bottom: 0;
   left: 0;
   padding: 1rem;
-  background-color: #afafaf;
+  background-color: #9bbcf2;
   text-align: center;
 }
 
@@ -49,6 +49,19 @@ section.landing {
   -o-background-size: cover;
   background-size: cover;  font-family: Georgia, 'Times New Roman', Times, serif;
   height: 1000px;
+}
+
+div.login-form {
+  background-color: #9bbcf2;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  width: 240px;
+  height: 240px;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
+  border-radius: 25px;
+  border: 2px solid #73AD21;
 }
 
 .vertical-text {
