@@ -8,6 +8,8 @@ import DPTopics from './DPTopics';
 import { loadSwimlanes } from '../redux/actions';
 import sinkImage from '../assets/sink.svg';
 import sourceImage from '../assets/source.svg';
+import classNames from 'classnames';
+import Arrow from './arrow/Arrow';
 
 // TODO: switch to this.props.data when ready
 // import swimlanesData from './swimlanes';
@@ -29,11 +31,11 @@ class DPConnectorView extends Component {
     return (
       <div className="dp-connectors-row" key={swimlane.topicGroupKey} >
         { db ? <DPDatabase name={db.name} host={db.host} /> : <div className="empty-div" /> }
-        { db ? <DPArrow /> : <div className="empty-div" /> }
+        { db ? <Arrow /> : <div className="empty-div" /> }
         { source ? <DPConnector connector={source} image={sourceImage} /> : <div className="empty-div" /> }
-        { source ? <DPArrow /> : <div className="empty-div" /> }
+        { source ? <Arrow /> : <div className="empty-div" /> }
         <DPTopics group={group} message={swimlane.warnMessage} name={swimlane.topicGroupKey} />
-        { sink ? <DPArrow /> : <div className="empty-div" /> }
+        { sink ? <Arrow /> : <div className="empty-div" /> }
         { sink ? <DPConnector connector={sink} image={sinkImage} /> : <div className="empty-div" /> }
       </div>
     );

@@ -42,6 +42,15 @@
   to { transform: rotate(360deg); }
 }
 
+section.landing {
+  background: url(./assets/servicehealth.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  font-family: Georgia, 'Times New Roman', Times, serif;
+  height: 1000px;
+}
+
 .vertical-text {
   position: relative;
 	transform: rotate(90deg);
@@ -63,7 +72,7 @@
   height: 500px;
   display: inline-block;
   position: absolute;
-  left: 300px;
+  left: 100px;
   top: 120px;
 }
 
@@ -183,10 +192,6 @@
   transform: rotate(180deg);
 }
 
-#mid .col2-spacer {
-  width: 400px;
-}
-
 .arrow-rotate32 {
   -webkit-transform: rotate(32deg);
   -moz-transform: rotate(32deg);
@@ -195,7 +200,6 @@
   transform: rotate(32deg);
   vertical-align: middle;
 }
-
 
 .dbIcons {
   margin: 0 auto;

@@ -9,11 +9,6 @@ import DPNodeView from './components/DPNodeView';
 import 'bootstrap/dist/css/bootstrap.css'
 import './App.css';
 
-const connectors = [
-  { name: "iready_dbz" },
-  { name: "lessons_dbz" },
-];
-
 class App extends Component {
 
   state = {
@@ -29,25 +24,23 @@ class App extends Component {
   }
   
   render() {
-    const { data} = this.state;
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">
-            DATA PLATFORM DASHBOARD
-            <Timer />
-          </h1>
-        </header>
-        <Container>
-          <Switch>
-            <Route path="/" exact component={Landingpage} />
-            <Route path="/data-platform" component={DPNodeView}/>
-            <Route path="/kafka" component={DPConnectorView} />
-          </Switch>
-        </Container>
-        <footer className="App-footer">
-          <p>{JSON.stringify(data)}</p>
-        </footer>
+        <Switch>
+          <Route path="/" exact component={Landingpage} />
+          <div>
+            <header className="App-header">
+              <h1 className="App-title">
+                DATA PLATFORM DASHBOARD
+                <Timer />
+              </h1>
+            </header>
+            <Container>
+              <Route path="/data-platform" component={DPNodeView}/>
+              <Route path="/kafka" component={DPConnectorView} />
+            </Container>
+          </div>
+        </Switch>
       </div>
     );
   }

@@ -1,0 +1,21 @@
+.connect-color.healthy,.connect-label.healthy,.connect-status.healthy{
+    fill:#2bb673;
+}
+
+.connect-color.warning,.connect-label.warning,.connect-status.warning{
+    fill:#e35761;
+}
+
+.connect-outline{
+    fill:#231f20;
+}
+.connect-label{
+    font-size:12.81px;
+}
+.connect-label,.connect-status{
+    fill:#606161;
+    font-family:Futura;
+}
+.connect-status{
+    font-size:9.92px;
+}

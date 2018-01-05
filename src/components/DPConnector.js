@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import DPConnectorDetails from './DPConnectorDetails';
-// TODO: switch to this.props.data when ready
-// import connectorData from './connectors';
+import ConnectorIcon from './connectorIcon/ConnectorIcon';
 
 class DPConnector extends Component {
 
@@ -20,13 +19,13 @@ class DPConnector extends Component {
   }
 
   render() {
-  	const { image, connector } = this.props;
+  	const { connector } = this.props;
   	console.log('connector', connector);
 
     return (
       <div className="DPConnector">
       <div className="DPConnectorLogo" onClick={this.toggle}>
-		<img src={image} alt="" width="80" height="80" />
+      	<ConnectorIcon />
         {connector.dispName}
       </div>
       <DPConnectorDetails connectorJson={connector} modal={this.state.modal} toggle={this.toggle}/> 
