@@ -1,20 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 export default () => (
   <section className="landing">
     <div className="login-form">
       <Form>
           <FormGroup>
-            <Label for="exampleEmail">Email</Label>
-            <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+            <Label className="login-field" for="exampleUsername">Username</Label>
+            <Input className="login-field" type="text" name="username" id="exampleUsername" placeholder="username" />
           </FormGroup>
           <FormGroup>
-            <Label for="examplePassword">Password</Label>
-            <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
+            <Label className="login-field" for="examplePassword">Password</Label>
+            <Input type="password" name="password" id="examplePassword" placeholder="password" />
           </FormGroup>
-          <Link to="/data-platform">Enter at your own risk</Link>
+          <Link to="/data-platform"><Button >SignOn</Button></Link>
         </Form>
     </div>
   </section>

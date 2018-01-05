@@ -52,16 +52,16 @@ section.landing {
 }
 
 div.login-form {
-  background-color: #9bbcf2;
+  background-color: #234071;
   position: absolute;
-  top: 50px;
-  left: 10px;
+  top: 120px;
+  left: 120px;
   width: 240px;
   height: 240px;
   padding: 10px;
-  box-shadow: 5px 10px #888888;
+  box-shadow: 5px 10px #879bbd;
   border-radius: 25px;
-  border: 2px solid #73AD21;
+  border: 2px solid #234071;
 }
 
 .vertical-text {
@@ -74,6 +74,11 @@ div.login-form {
   position: absolute;
   left: 50px;
   top: 180px;
+}
+
+.login-field {
+  color: #ffffff;
+  font-size: 1em;
 }
 
 .DPNodeView {
