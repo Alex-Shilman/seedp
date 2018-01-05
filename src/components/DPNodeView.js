@@ -22,9 +22,9 @@ class DPNodeView extends Component {
           <div className="dp-nodes-container">
             <div className="dp-nodes-row">
               <Arrow />
-              <KafkaIcon status='healthy' onDrillDown={this.props.onDrillDown} />
+              <KafkaIcon status='warning' onDrillDown={this.props.onDrillDown} />
               <Arrow />
-              <NoSqlIcon status='warning' />
+              <NoSqlIcon status='healthy' />
             </div>
             <div className="dp-nodes-row">
               <div className="DPNode" />
@@ -36,7 +36,7 @@ class DPNodeView extends Component {
               <Arrow rotate="arrow-rotate180"/>
               <ServerIcon status='healthy' />
               <Arrow rotate="arrow-rotate180"/>
-              <DBIcon name="MemSql" status='warning' />
+              <DBIcon name="MemSql" status='healthy' />
             </div>
           </div>
         </div>
