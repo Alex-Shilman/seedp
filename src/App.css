@@ -110,7 +110,7 @@ section.landing {
   display: table-cell;
   padding: 10px;
   width: 100px;
-  height: auto;
+  /*height: auto;*/
 }
 
 .DPConnectorView {
