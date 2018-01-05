@@ -9,11 +9,6 @@ import DPNodeView from './components/DPNodeView';
 import 'bootstrap/dist/css/bootstrap.css'
 import './App.css';
 
-const connectors = [
-  { name: "iready_dbz" },
-  { name: "lessons_dbz" },
-];
-
 class App extends Component {
 
   state = {
@@ -29,7 +24,6 @@ class App extends Component {
   }
   
   render() {
-    const { data} = this.state;
     return (
       <div className="App">
         <Switch>
