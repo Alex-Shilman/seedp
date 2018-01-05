@@ -28,9 +28,12 @@ class DPTopics extends Component {
         <p className="topic-text"><Button id={buttonId} className="button-style" onClick={this.toggle}>{group.dispName}</Button></p>
         <PipeIcon status={message ? 'warning' : 'healthy'}/>
         <p className="error-text">{message}</p>
-        <Popover placement="left" isOpen={this.state.popoverOpen} target={buttonId} toggle={this.toggle}>
+        <Popover className="topic-popover" placement="left" isOpen={this.state.popoverOpen} target={buttonId} toggle={this.toggle}>
           <PopoverHeader>Topics in Group</PopoverHeader>
-          <PopoverBody>{group.topics.join(', ')}</PopoverBody>
+          <PopoverBody>
+            {group.topics.map(topic => ( <p>{topic}</p> )
+            )}
+          </PopoverBody>
         </Popover>
       </div>
     );

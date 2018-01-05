@@ -297,3 +297,7 @@ div.login-form {
 .alert-text {
   font-size: .75em;
 }
+
+.topic-popover {
+  width: 800px;
+}
