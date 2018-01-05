@@ -5,7 +5,7 @@ import './kafkaIcon.css';
 class KafkaIcon extends Component {
   render() {
     return(
-      <div className="kafkaIcons">
+      <div className="kafkaIcons" onClick={this.props.onDrillDown}>
         <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.38 116.56">
             <title>Untitled-9</title>
             <g id="g3175">

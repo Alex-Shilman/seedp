@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Container } from 'reactstrap';
 import DPConnectorView from './components/DPConnectorView';
 import DPNode from './components/DPNode';
 import logo from './logo.svg';
@@ -17,6 +18,7 @@ import NoSqlIcon from './components/noSqlIcon/NoSqlIcon';
 import ServerIcon from './components/serverIcon/ServerIcon';
 
 import { subscribeToTimer, subscribeToData } from './api';
+import 'bootstrap/dist/css/bootstrap.css'
 import './App.css';
 
 const connectors = [
@@ -56,42 +58,15 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">DATA PLATFORM DASHBOARD {timestamp}</h1>
         </header>
-        {/* {this.state.displayConnectors ?
-          <DPConnectorView connectors={connectors} onDrillUp={this._handleDrillUp} /> :
-          <DPNodeView onDrillDown={this._handleDrillDown} />
-        } */}
-        {/* <header className="App-footer">
+        <Container>
+          {this.state.displayConnectors ?
+            <DPConnectorView connectors={connectors} onDrillUp={this._handleDrillUp} /> :
+            <DPNodeView onDrillDown={this._handleDrillDown} />
+          }
+        </Container>
+        <footer className="App-footer">
           <p>{JSON.stringify(data)}</p>
-        </header> */}
-        <div>
-          <div id="ready">
-            <IReadyIcon />
-          </div>
-          <div id="kafka">
-            <div id="top">
-              <div><Arrow /></div>
-              <div><ServerIcon /></div>
-              <div><Arrow /></div>
-              <div><DBIcon /></div>
-            </div>
-            <div id="mid">
-              <div class="col2-spacer"></div>
-              <div><Arrow name="row2-col3-arrow" /></div>
-              <div><Arrow name="row2-col4-arrow" /></div>
-            </div>
-            <div id="bottom">
-              <div><Arrow /></div>
-              <div><KafkaIcon status='healthy' /></div>
-              <div><Arrow /></div>
-              <div><NoSqlIcon status='warning' /></div>
-            </div>
-          </div>
-          {/* <Arrow />
-          <DBIcon />
-          <KafkaIcon />
-          <NoSqlIcon />
-          <ServerIcon /> */}
-        </div>
+        </footer>
       </div>
     );
   }

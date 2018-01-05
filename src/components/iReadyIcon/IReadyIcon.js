@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import './iReadyIcon.css';
 
 const IReadyIcon = () => (
-  <div className="iReadyIcons">
+  <div className="iready">
     <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100.88 496.92">
         <title>Untitled-9</title>
         <path class="iReady-lines" d="M734.16,633H633.28V136.1H734.16V633Zm-87.88-13h74.88V149.1H646.28V620Z" transform="translate(-633.28 -136.1)" />
