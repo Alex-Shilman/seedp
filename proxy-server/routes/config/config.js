@@ -1,5 +1,6 @@
 import {
   getData,
+  getSwimLanes,
 } from '../handlers/index';
 
 const { npm_package_config_mockserver_port: MOCK_PORT } = process.env;
@@ -25,6 +26,14 @@ const rpcHandlers = {
       type: 'local',
       methods: ['getLocalStudents'],
       handler: getData,
+    },
+  ],
+  
+  'rpc/swimlanes': [
+    {
+      type: 'local',
+      methods: ['getSwimLanes'],
+      handler: getSwimLanes,
     },
   ],
 };

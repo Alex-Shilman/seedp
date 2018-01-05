@@ -20,3 +20,20 @@ export const loadData = ({params = {}} = {}) => {
     )
   }
 }
+
+export const loadSwimlanes = ({params = {}} = {}) => {
+  return dispatch => {
+    dispatch({ type: LOAD_DATA_REQUEST });
+    JsonRPC('/rpc/swimlanes', { ...params, method: 'getSwimLanes' }).then(({ data }) =>
+      dispatch({
+        type: LOAD_DATA_SUCCESS,
+        payload: data.data
+      })
+    ).catch(error =>
+      dispatch({
+        type: LOAD_DATA_FAIL,
+        error
+      })
+    )
+  }
+}
