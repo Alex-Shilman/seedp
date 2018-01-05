@@ -5,6 +5,7 @@ import kafka from '../assets/kafka.svg';
 import datalake from '../assets/nosqldb.svg';
 import memsql from '../assets/db.svg';
 import server from '../assets/server.svg';
+import { Link } from 'react-router-dom';
 
 class DPNodeView extends Component {
   render() {
@@ -17,7 +18,9 @@ class DPNodeView extends Component {
           <div className="dp-nodes-container">
             <div className="dp-nodes-row">
               <DPArrow />
-              <DPNode svg={kafka} onDrillDown={this.props.onDrillDown} />
+              <Link to="kafka">
+                <DPNode svg={kafka}/>
+              </Link>
               <DPArrow />
               <DPNode name="Data Lake" svg={datalake} />
             </div>

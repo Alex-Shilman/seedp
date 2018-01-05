@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
 import { Container } from 'reactstrap';
 import DPConnectorView from './components/DPConnectorView';
 import Timer from './components/Timer';
 import DPNodeView from './components/DPNodeView';
+import Landingpage from './components/Landingpage';
 import { subscribeToData } from './api';
 import 'bootstrap/dist/css/bootstrap.css'
 import './App.css';
@@ -15,7 +17,6 @@ const connectors = [
 class App extends Component {
   
   state = {
-    displayConnectors: false,
     data: null
   }
   
@@ -27,16 +28,8 @@ class App extends Component {
     });
   }
   
-  _handleDrillDown = () => {
-    this.setState({displayConnectors: true});
-  }
-  
-  _handleDrillUp = () => {
-    this.setState({displayConnectors: false});
-  }
-  
   render() {
-    const {timestamp, data} = this.state;
+    const { data} = this.state;
     return (
       <div className="App">
         <header className="App-header">
@@ -46,10 +39,11 @@ class App extends Component {
           </h1>
         </header>
         <Container>
-          {this.state.displayConnectors ?
-            <DPConnectorView connectors={connectors} onDrillUp={this._handleDrillUp} /> :
-            <DPNodeView onDrillDown={this._handleDrillDown} />
-          }
+          <Switch>
+            <Route path="/" exact component={Landingpage} />
+            <Route path="/data-platform" component={DPNodeView}/>
+            <Route path="/kafka" component={DPConnectorView} />
+          </Switch>
         </Container>
         <footer className="App-footer">
           <p>{JSON.stringify(data)}</p>

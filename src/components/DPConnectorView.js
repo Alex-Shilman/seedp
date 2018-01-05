@@ -34,9 +34,10 @@ class DPConnectorView extends Component {
   };
 
   render() {
+    const { history } = this.props;
     return (
       <div className="DPConnectorView">
-        <button onClick={this.props.onDrillUp} >Back</button>
+        <button onClick={history.goBack}>Back</button>
         <div className="dp-connectors-container">
           {swimlanesData.swimlanes.map((swimlane) => this._renderConnectorRow(swimlane) )}
         </div>
