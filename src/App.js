@@ -24,23 +24,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">
-            DATA PLATFORM DASHBOARD
-            <Timer />
-          </h1>
-        </header>
-        <Notification />
-        <Container>
-          <Switch>
-            <Route path="/" exact component={Landingpage} />
-            <Route path="/data-platform" component={DPNodeView}/>
-            <Route path="/kafka" component={DPConnectorView} />
-          </Switch>
-        </Container>
         <Switch>
           <Route path="/" exact component={Landingpage} />
-          <div>
+          <section>
             <header className="App-header">
               <h1 className="App-title">
                 DATA PLATFORM DASHBOARD
@@ -52,7 +38,7 @@ class App extends Component {
               <Route path="/data-platform" component={DPNodeView}/>
               <Route path="/kafka" component={DPConnectorView} />
             </Container>
-          </div>
+          </section>
         </Switch>
       </div>
     );

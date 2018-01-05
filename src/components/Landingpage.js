@@ -14,7 +14,7 @@ export default () => (
             <Label className="login-field" for="examplePassword">Password</Label>
             <Input type="password" name="password" id="examplePassword" placeholder="password" />
           </FormGroup>
-          <Link to="/data-platform"><Button >SignOn</Button></Link>
+          <Link to="/data-platform">SignOn</Link>
         </Form>
     </div>
   </section>

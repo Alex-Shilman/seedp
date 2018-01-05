@@ -2,28 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f38cc830-9013-428b-b75c-7c96a331f61f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/seedp-login.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/DPConnectorDetails.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/connectorIcon/ConnectorIcon.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/connectorIcon/connectorIcon.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/connectors.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/pipeIcon/PipeIcon.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/pipeIcon/pipeIcon.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dump.rdb" afterPath="$PROJECT_DIR$/dump.rdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxy-server/dump.rdb" afterPath="$PROJECT_DIR$/proxy-server/dump.rdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.css" afterPath="$PROJECT_DIR$/src/App.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/DPConnector.js" afterPath="$PROJECT_DIR$/src/components/DPConnector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/DPConnectorView.js" afterPath="$PROJECT_DIR$/src/components/DPConnectorView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/DPTopics.js" afterPath="$PROJECT_DIR$/src/components/DPTopics.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Landingpage.js" afterPath="$PROJECT_DIR$/src/components/Landingpage.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/arrow/Arrow.js" afterPath="$PROJECT_DIR$/src/components/arrow/Arrow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/arrow/arrow.css" afterPath="$PROJECT_DIR$/src/components/arrow/arrow.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/kafkaIcon/kafkaIcon.css" afterPath="$PROJECT_DIR$/src/components/kafkaIcon/kafkaIcon.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/serverIcon/serverIcon.css" afterPath="$PROJECT_DIR$/src/components/serverIcon/serverIcon.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/connectorIcon/ConnectorIcon.js" afterPath="$PROJECT_DIR$/src/components/connectorIcon/ConnectorIcon.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pipeIcon/PipeIcon.js" afterPath="$PROJECT_DIR$/src/components/pipeIcon/PipeIcon.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -80,28 +66,6 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="swimlanes.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/swimlanes.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1680">
-                  <caret line="84" column="2" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="84" selection-end-column="2" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/proxy-server/routes/config/config.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="493">
-                  <caret line="34" column="29" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="29" />
-                  <folding>
-                    <element signature="e#0#63#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="getSwimLanes.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/proxy-server/routes/handlers/local/getSwimLanes.js">
               <provider selected="true" editor-type-id="text-editor">
@@ -114,11 +78,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Notification.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Notification.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/Notification.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="388">
-                  <caret line="42" column="89" lean-forward="false" selection-start-line="42" selection-start-column="89" selection-end-line="42" selection-end-column="89" />
+                <state relative-caret-position="288">
+                  <caret line="37" column="26" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -126,24 +90,52 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/proxy-server/routes/handlers/local/index.js">
+          <file leaf-file-name="PipeIcon.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/components/pipeIcon/PipeIcon.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="20">
-                  <caret line="1" column="31" lean-forward="false" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+                <state relative-caret-position="360">
+                  <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="getData.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/proxy-server/routes/handlers/local/getData.js">
+          <file leaf-file-name="Arrow.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/components/arrow/Arrow.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="140">
+                  <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ConnectorIcon.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/components/connectorIcon/ConnectorIcon.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="40">
+                  <caret line="4" column="5" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="5" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="nosqldb.svg" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/assets/nosqldb.svg">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="0">
-                  <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                  </folding>
+                  <caret line="0" column="240" lean-forward="false" selection-start-line="0" selection-start-column="240" selection-end-line="0" selection-end-column="240" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/package.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="96">
+                  <caret line="39" column="27" lean-forward="false" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -177,8 +169,8 @@
           <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/App.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="500">
-                  <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+                <state relative-caret-position="334">
+                  <caret line="40" column="20" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -186,7 +178,17 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Landingpage.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/components/Landingpage.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="280">
+                  <caret line="16" column="42" lean-forward="false" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/.gitignore">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="325">
@@ -245,12 +247,12 @@
       <find>got data</find>
       <find>chalk</find>
       <find>url(</find>
-      <find>class=&quot;</find>
-      <find>class</find>
       <find>query</find>
       <find>select *</find>
       <find>connectors</find>
       <find>.map</find>
+      <find>class=&quot;</find>
+      <find>class</find>
     </findStrings>
     <replaceStrings>
       <replace>callback</replace>
@@ -285,19 +287,16 @@
         <option value="$PROJECT_DIR$/proxy-server/package.json" />
         <option value="$PROJECT_DIR$/src/api.js" />
         <option value="$PROJECT_DIR$/src/redux/store.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/Timer.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/DPNode.js" />
-        <option value="$PROJECT_DIR$/src/components/Landingpage.js" />
         <option value="$PROJECT_DIR$/src/components/DPNodeView.js" />
         <option value="$PROJECT_DIR$/src/components/arrow/arrow.css" />
         <option value="$PROJECT_DIR$/src/components/iReadyIcon/IReadyIcon.js" />
         <option value="$PROJECT_DIR$/src/assets/db.svg" />
         <option value="$PROJECT_DIR$/src/assets/kafka.svg" />
         <option value="$PROJECT_DIR$/src/assets/nosql.svg" />
-        <option value="$PROJECT_DIR$/src/components/arrow/Arrow.js" />
         <option value="$PROJECT_DIR$/src/components/dbIcon/DBIcon.js" />
         <option value="$PROJECT_DIR$/src/components/noSqlIcon/NoSqlIcon.js" />
         <option value="$PROJECT_DIR$/src/components/serverIcon/ServerIcon.js" />
@@ -309,8 +308,13 @@
         <option value="$PROJECT_DIR$/src/components/DPConnectorView.js" />
         <option value="$PROJECT_DIR$/src/redux/actions.js" />
         <option value="$PROJECT_DIR$/src/components/Notification.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/components/pipeIcon/PipeIcon.js" />
+        <option value="$PROJECT_DIR$/src/components/arrow/Arrow.js" />
+        <option value="$PROJECT_DIR$/src/components/connectorIcon/ConnectorIcon.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/components/Landingpage.js" />
       </list>
     </option>
   </component>
@@ -455,7 +459,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53352000" />
+    <option name="totallyTimeSpent" value="54090000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -509,28 +513,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/proxy-server/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-476">
-          <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proxy-server/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#33#0" expanded="false" />
-            <marker date="1515165843000" expanded="true" signature="323:653" ph="{...}" />
-            <marker date="1515165843000" expanded="true" signature="366:405" ph="{...}" />
-            <marker date="1515165843000" expanded="true" signature="454:649" ph="{...}" />
-            <marker date="1515165843000" expanded="true" signature="554:633" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/proxy-server/routes/utils/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
@@ -582,30 +564,6 @@
         <state relative-caret-position="-746">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="58" column="16" lean-forward="false" selection-start-line="56" selection-start-column="11" selection-end-line="58" selection-end-column="16" />
-          <folding>
-            <marker date="1515184372000" expanded="true" signature="0:2924" ph="{&quot;name&quot;: &quot;my-app&quot;...}" />
-            <marker date="1515184372000" expanded="true" signature="81:1647" ph="{&quot;autoprefixer&quot;: &quot;7.1.6&quot;...}" />
-            <marker date="1515184372000" expanded="true" signature="1715:1780" ph="{...}" />
-            <marker date="1515184372000" expanded="true" signature="1729:1776" ph="{&quot;target&quot;: &quot;http://localhost:8080&quot;...}" />
-            <marker date="1515184372000" expanded="true" signature="1795:1923" ph="{&quot;start&quot;: &quot;node scripts/start.js&quot;...}" />
-            <marker date="1515184372000" expanded="true" signature="1935:2811" ph="{&quot;testEnvironment&quot;: &quot;node&quot;...}" />
-            <marker date="1515184372000" expanded="true" signature="1964:2001" ph="[...]" />
-            <marker date="1515184372000" expanded="true" signature="2021:2066" ph="[...]" />
-            <marker date="1515184372000" expanded="true" signature="2085:2201" ph="[...]" />
-            <marker date="1515184372000" expanded="true" signature="2286:2503" ph="{&quot;^.+\.(js|jsx|mjs)$&quot;: &quot;&lt;rootDir&gt;/node_modules/babel-jest&quot;...}" />
-            <marker date="1515184372000" expanded="true" signature="2536:2596" ph="[...]" />
-            <marker date="1515184372000" expanded="true" signature="2622:2672" ph="{&quot;^react-native$&quot;: &quot;react-native-web&quot;...}" />
-            <marker date="1515184372000" expanded="true" signature="2702:2807" ph="[...]" />
-            <marker date="1515184372000" expanded="true" signature="2824:2870" ph="{...}" />
-            <marker date="1515184372000" expanded="true" signature="2841:2866" ph="[...]" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -663,16 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Landingpage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="52" lean-forward="false" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/DPNode.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -725,14 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="2943" lean-forward="false" selection-start-line="0" selection-start-column="2943" selection-end-line="0" selection-end-column="2943" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/nosqldb.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="471" lean-forward="false" selection-start-line="0" selection-start-column="471" selection-end-line="0" selection-end-column="471" />
           <folding />
         </state>
       </provider>
@@ -821,16 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/arrow/Arrow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/DPNodeView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -872,7 +802,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -898,7 +828,7 @@
         <state relative-caret-position="493">
           <caret line="34" column="29" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="29" />
           <folding>
-            <element signature="e#0#63#0" expanded="true" />
+            <element signature="e#0#63#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -970,30 +900,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Notification.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="42" column="89" lean-forward="false" selection-start-line="42" selection-start-column="89" selection-end-line="42" selection-end-column="89" />
+        <state relative-caret-position="288">
+          <caret line="37" column="26" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pipeIcon/PipeIcon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/arrow/Arrow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/connectorIcon/ConnectorIcon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="4" column="5" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/nosqldb.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="240" lean-forward="false" selection-start-line="0" selection-start-column="240" selection-end-line="0" selection-end-column="240" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="39" column="27" lean-forward="false" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+        <state relative-caret-position="334">
+          <caret line="40" column="20" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/components/Landingpage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+        <state relative-caret-position="280">
+          <caret line="16" column="42" lean-forward="false" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
           <folding />
         </state>
       </provider>
