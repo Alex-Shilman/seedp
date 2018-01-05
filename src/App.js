@@ -38,6 +38,22 @@ class App extends Component {
             <Route path="/kafka" component={DPConnectorView} />
           </Switch>
         </Container>
+        <Switch>
+          <Route path="/" exact component={Landingpage} />
+          <div>
+            <header className="App-header">
+              <h1 className="App-title">
+                DATA PLATFORM DASHBOARD
+                <Timer />
+              </h1>
+            </header>
+            <Notification />
+            <Container>
+              <Route path="/data-platform" component={DPNodeView}/>
+              <Route path="/kafka" component={DPConnectorView} />
+            </Container>
+          </div>
+        </Switch>
       </div>
     );
   }

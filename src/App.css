@@ -25,7 +25,7 @@
   bottom: 0;
   left: 0;
   padding: 1rem;
-  background-color: #afafaf;
+  background-color: #9bbcf2;
   text-align: center;
 }
 
@@ -42,6 +42,28 @@
   to { transform: rotate(360deg); }
 }
 
+section.landing {
+  background: url(./assets/servicehealth.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  font-family: Georgia, 'Times New Roman', Times, serif;
+  height: 1000px;
+}
+
+div.login-form {
+  background-color: #234071;
+  position: absolute;
+  top: 120px;
+  left: 120px;
+  width: 240px;
+  height: 240px;
+  padding: 10px;
+  box-shadow: 5px 10px #879bbd;
+  border-radius: 25px;
+  border: 2px solid #234071;
+}
+
 .vertical-text {
   position: relative;
 	transform: rotate(90deg);
@@ -54,6 +76,11 @@
   top: 180px;
 }
 
+.login-field {
+  color: #ffffff;
+  font-size: 1em;
+}
+
 .DPNodeView {
   padding: 10px;
 }
@@ -63,7 +90,7 @@
   height: 500px;
   display: inline-block;
   position: absolute;
-  left: 300px;
+  left: 100px;
   top: 120px;
 }
 
@@ -101,7 +128,7 @@
   display: table-cell;
   padding: 10px;
   width: 100px;
-  height: auto;
+  /*height: auto;*/
 }
 
 .DPConnectorView {
@@ -183,10 +210,6 @@
   transform: rotate(180deg);
 }
 
-#mid .col2-spacer {
-  width: 400px;
-}
-
 .arrow-rotate32 {
   -webkit-transform: rotate(32deg);
   -moz-transform: rotate(32deg);
@@ -195,7 +218,6 @@
   transform: rotate(32deg);
   vertical-align: middle;
 }
-
 
 .dbIcons {
   margin: 0 auto;
@@ -231,4 +253,15 @@
   display: inline-block;
   float: left;
   width: 100px;
+}
+
+.DPConnectorLogo:hover {
+    cursor: pointer;
+}
+
+.DPTopicsText:hover {
+    cursor: pointer;
+}
+.alert-text {
+  font-size: .75em;
 }

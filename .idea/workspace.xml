@@ -2,12 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f38cc830-9013-428b-b75c-7c96a331f61f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/seedp-login.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/DPConnectorDetails.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/connectorIcon/ConnectorIcon.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/connectorIcon/connectorIcon.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/connectors.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/pipeIcon/PipeIcon.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/pipeIcon/pipeIcon.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dump.rdb" afterPath="$PROJECT_DIR$/dump.rdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxy-server/dump.rdb" afterPath="$PROJECT_DIR$/proxy-server/dump.rdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxy-server/services/redis.js" afterPath="$PROJECT_DIR$/proxy-server/services/redis.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.css" afterPath="$PROJECT_DIR$/src/App.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/DPConnector.js" afterPath="$PROJECT_DIR$/src/components/DPConnector.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/DPConnectorView.js" afterPath="$PROJECT_DIR$/src/components/DPConnectorView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/actions.js" afterPath="$PROJECT_DIR$/src/redux/actions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/reducers.js" afterPath="$PROJECT_DIR$/src/redux/reducers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/DPTopics.js" afterPath="$PROJECT_DIR$/src/components/DPTopics.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Landingpage.js" afterPath="$PROJECT_DIR$/src/components/Landingpage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/arrow/Arrow.js" afterPath="$PROJECT_DIR$/src/components/arrow/Arrow.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/arrow/arrow.css" afterPath="$PROJECT_DIR$/src/components/arrow/arrow.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/kafkaIcon/kafkaIcon.css" afterPath="$PROJECT_DIR$/src/components/kafkaIcon/kafkaIcon.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/serverIcon/serverIcon.css" afterPath="$PROJECT_DIR$/src/components/serverIcon/serverIcon.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,7 +42,7 @@
     <fileColor scope="Non-Project Files (Material Palenight)" color="2f2e43" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.78193367">
+    <splitter split-orientation="horizontal" split-proportion="0.4629499">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="api.js" pinned="false" current-in-tab="false">
@@ -45,7 +61,7 @@
             <entry file="file://$PROJECT_DIR$/src/redux/reducers.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="765">
-                  <caret line="51" column="19" lean-forward="true" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+                  <caret line="51" column="19" lean-forward="false" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
                   <folding>
                     <element signature="e#0#40#0" expanded="true" />
                     <marker date="1515180280000" expanded="true" signature="1008:1012" ph="{&quot;data&quot;: kafkaData...}" />
@@ -58,7 +74,7 @@
             <entry file="file://$PROJECT_DIR$/src/redux/actions.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="259">
-                  <caret line="37" column="3" lean-forward="true" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
+                  <caret line="37" column="3" lean-forward="false" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
                   <folding />
                 </state>
               </provider>
@@ -68,7 +84,7 @@
             <entry file="file://$PROJECT_DIR$/src/components/swimlanes.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="1680">
-                  <caret line="84" column="2" lean-forward="true" selection-start-line="1" selection-start-column="22" selection-end-line="84" selection-end-column="2" />
+                  <caret line="84" column="2" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="84" selection-end-column="2" />
                   <folding />
                 </state>
               </provider>
@@ -124,7 +140,7 @@
             <entry file="file://$PROJECT_DIR$/proxy-server/routes/handlers/local/getData.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="0">
-                  <caret line="0" column="7" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+                  <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -140,7 +156,7 @@
             <entry file="file://$PROJECT_DIR$/proxy-server/services/mysql.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="419">
-                  <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+                  <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -161,8 +177,8 @@
           <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/App.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="304">
-                  <caret line="42" column="3" lean-forward="true" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
+                <state relative-caret-position="500">
+                  <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -170,12 +186,32 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="DPConnectorView.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="325">
+                  <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DPConnectorView.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/DPConnectorView.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="409">
-                  <caret line="48" column="52" lean-forward="false" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
-                  <folding />
+                  <caret line="51" column="52" lean-forward="false" selection-start-line="51" selection-start-column="52" selection-end-line="51" selection-end-column="52" />
+                  <folding>
+                    <marker date="1515184372000" expanded="true" signature="1793:1862" ph="&lt;div/&gt;" />
+                    <marker date="1515184372000" expanded="true" signature="1793:1873" ph="{...}" />
+                    <marker date="1515184372000" expanded="true" signature="1793:2333" ph="{...}" />
+                    <marker date="1515184372000" expanded="true" signature="1887:2331" ph="{...}" />
+                    <marker date="1515184372000" expanded="true" signature="1968:2320" ph="&lt;div/&gt;" />
+                    <marker date="1515184372000" expanded="true" signature="2116:2285" ph="&lt;div/&gt;" />
+                    <marker date="1515184372000" expanded="true" signature="2376:2509" ph="{...}" />
+                    <marker date="1515184372000" expanded="true" signature="2387:2507" ph="{&quot;loading&quot;: globalState.data.loading...}" />
+                    <marker date="1515184372000" expanded="true" signature="2539:2568" ph="{&quot;loadData&quot;: loadSwimlanes...}" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -269,11 +305,12 @@
         <option value="$PROJECT_DIR$/proxy-server/routes/handlers/local/index.js" />
         <option value="$PROJECT_DIR$/proxy-server/routes/handlers/local/getSwimLanes.js" />
         <option value="$PROJECT_DIR$/src/redux/reducers.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/proxy-server/services/redis.js" />
         <option value="$PROJECT_DIR$/src/components/DPConnectorView.js" />
         <option value="$PROJECT_DIR$/src/redux/actions.js" />
         <option value="$PROJECT_DIR$/src/components/Notification.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -418,7 +455,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52993000" />
+    <option name="totallyTimeSpent" value="53352000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -433,7 +470,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17501764" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17501764" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -441,7 +478,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2375622" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38308457" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -472,13 +509,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/proxy-server/dump.rdb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/proxy-server/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-476">
@@ -492,7 +522,7 @@
         <state relative-caret-position="31">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <element signature="e#0#33#0" expanded="true" />
+            <element signature="e#0#33#0" expanded="false" />
             <marker date="1515165843000" expanded="true" signature="323:653" ph="{...}" />
             <marker date="1515165843000" expanded="true" signature="366:405" ph="{...}" />
             <marker date="1515165843000" expanded="true" signature="454:649" ph="{...}" />
@@ -560,21 +590,21 @@
         <state relative-caret-position="177">
           <caret line="58" column="16" lean-forward="false" selection-start-line="56" selection-start-column="11" selection-end-line="58" selection-end-column="16" />
           <folding>
-            <marker date="1515169543000" expanded="true" signature="0:2831" ph="{&quot;name&quot;: &quot;my-app&quot;...}" />
-            <marker date="1515169543000" expanded="true" signature="81:1554" ph="{&quot;autoprefixer&quot;: &quot;7.1.6&quot;...}" />
-            <marker date="1515169543000" expanded="true" signature="1622:1687" ph="{...}" />
-            <marker date="1515169543000" expanded="true" signature="1636:1683" ph="{&quot;target&quot;: &quot;http://localhost:8080&quot;...}" />
-            <marker date="1515169543000" expanded="true" signature="1702:1830" ph="{&quot;start&quot;: &quot;node scripts/start.js&quot;...}" />
-            <marker date="1515169543000" expanded="true" signature="1842:2718" ph="{&quot;testEnvironment&quot;: &quot;node&quot;...}" />
-            <marker date="1515169543000" expanded="true" signature="1871:1908" ph="[...]" />
-            <marker date="1515169543000" expanded="true" signature="1928:1973" ph="[...]" />
-            <marker date="1515169543000" expanded="true" signature="1992:2108" ph="[...]" />
-            <marker date="1515169543000" expanded="true" signature="2193:2410" ph="{&quot;^.+\.(js|jsx|mjs)$&quot;: &quot;&lt;rootDir&gt;/node_modules/babel-jest&quot;...}" />
-            <marker date="1515169543000" expanded="true" signature="2443:2503" ph="[...]" />
-            <marker date="1515169543000" expanded="true" signature="2529:2579" ph="{&quot;^react-native$&quot;: &quot;react-native-web&quot;...}" />
-            <marker date="1515169543000" expanded="true" signature="2609:2714" ph="[...]" />
-            <marker date="1515169543000" expanded="true" signature="2731:2777" ph="{...}" />
-            <marker date="1515169543000" expanded="true" signature="2748:2773" ph="[...]" />
+            <marker date="1515184372000" expanded="true" signature="0:2924" ph="{&quot;name&quot;: &quot;my-app&quot;...}" />
+            <marker date="1515184372000" expanded="true" signature="81:1647" ph="{&quot;autoprefixer&quot;: &quot;7.1.6&quot;...}" />
+            <marker date="1515184372000" expanded="true" signature="1715:1780" ph="{...}" />
+            <marker date="1515184372000" expanded="true" signature="1729:1776" ph="{&quot;target&quot;: &quot;http://localhost:8080&quot;...}" />
+            <marker date="1515184372000" expanded="true" signature="1795:1923" ph="{&quot;start&quot;: &quot;node scripts/start.js&quot;...}" />
+            <marker date="1515184372000" expanded="true" signature="1935:2811" ph="{&quot;testEnvironment&quot;: &quot;node&quot;...}" />
+            <marker date="1515184372000" expanded="true" signature="1964:2001" ph="[...]" />
+            <marker date="1515184372000" expanded="true" signature="2021:2066" ph="[...]" />
+            <marker date="1515184372000" expanded="true" signature="2085:2201" ph="[...]" />
+            <marker date="1515184372000" expanded="true" signature="2286:2503" ph="{&quot;^.+\.(js|jsx|mjs)$&quot;: &quot;&lt;rootDir&gt;/node_modules/babel-jest&quot;...}" />
+            <marker date="1515184372000" expanded="true" signature="2536:2596" ph="[...]" />
+            <marker date="1515184372000" expanded="true" signature="2622:2672" ph="{&quot;^react-native$&quot;: &quot;react-native-web&quot;...}" />
+            <marker date="1515184372000" expanded="true" signature="2702:2807" ph="[...]" />
+            <marker date="1515184372000" expanded="true" signature="2824:2870" ph="{...}" />
+            <marker date="1515184372000" expanded="true" signature="2841:2866" ph="[...]" />
           </folding>
         </state>
       </provider>
@@ -620,7 +650,7 @@
         <state relative-caret-position="954">
           <caret line="56" column="42" lean-forward="false" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#0#30#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -638,7 +668,7 @@
         <state relative-caret-position="120">
           <caret line="6" column="52" lean-forward="false" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -712,7 +742,7 @@
         <state relative-caret-position="433">
           <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="23" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -730,7 +760,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -740,7 +770,7 @@
         <state relative-caret-position="324">
           <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -750,7 +780,7 @@
         <state relative-caret-position="-24">
           <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -760,7 +790,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -786,7 +816,7 @@
         <state relative-caret-position="-61">
           <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -796,7 +826,7 @@
         <state relative-caret-position="99">
           <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -806,7 +836,7 @@
         <state relative-caret-position="260">
           <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -824,7 +854,7 @@
         <state relative-caret-position="300">
           <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -840,7 +870,7 @@
     <entry file="file://$PROJECT_DIR$/proxy-server/routes/handlers/local/getData.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="7" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -850,7 +880,7 @@
     <entry file="file://$PROJECT_DIR$/proxy-server/services/mysql.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="419">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -858,7 +888,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/swimlanes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1680">
-          <caret line="84" column="2" lean-forward="true" selection-start-line="1" selection-start-column="22" selection-end-line="84" selection-end-column="2" />
+          <caret line="84" column="2" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="84" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -886,7 +916,7 @@
     <entry file="file://$PROJECT_DIR$/src/redux/reducers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
-          <caret line="51" column="19" lean-forward="true" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+          <caret line="51" column="19" lean-forward="false" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
             <marker date="1515180280000" expanded="true" signature="1008:1012" ph="{&quot;data&quot;: kafkaData...}" />
@@ -914,28 +944,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="42" column="3" lean-forward="true" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/DPConnectorView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
-          <caret line="48" column="52" lean-forward="false" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
-          <folding />
+          <caret line="51" column="52" lean-forward="false" selection-start-line="51" selection-start-column="52" selection-end-line="51" selection-end-column="52" />
+          <folding>
+            <marker date="1515184372000" expanded="true" signature="1793:1862" ph="&lt;div/&gt;" />
+            <marker date="1515184372000" expanded="true" signature="1793:1873" ph="{...}" />
+            <marker date="1515184372000" expanded="true" signature="1793:2333" ph="{...}" />
+            <marker date="1515184372000" expanded="true" signature="1887:2331" ph="{...}" />
+            <marker date="1515184372000" expanded="true" signature="1968:2320" ph="&lt;div/&gt;" />
+            <marker date="1515184372000" expanded="true" signature="2116:2285" ph="&lt;div/&gt;" />
+            <marker date="1515184372000" expanded="true" signature="2376:2509" ph="{...}" />
+            <marker date="1515184372000" expanded="true" signature="2387:2507" ph="{&quot;loading&quot;: globalState.data.loading...}" />
+            <marker date="1515184372000" expanded="true" signature="2539:2568" ph="{&quot;loadData&quot;: loadSwimlanes...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/redux/actions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
-          <caret line="37" column="3" lean-forward="true" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
+          <caret line="37" column="3" lean-forward="false" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -947,6 +977,24 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
