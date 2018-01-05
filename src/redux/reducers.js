@@ -7,8 +7,8 @@ import {
 
 const DEFAULT_STATE = {
   loading: false,
-  data: null,
-  error: null
+  data: {},
+  error: {}
 };
 
 const kafkaData = (state = DEFAULT_STATE, action) => {
@@ -17,8 +17,8 @@ const kafkaData = (state = DEFAULT_STATE, action) => {
       return {
         ...state,
         loadding: true,
-        error: null,
-        data: null
+        error: {},
+        data: {}
       };
     case LOAD_DATA_SUCCESS:
       return {

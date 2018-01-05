@@ -1,23 +1,11 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
 import { Container } from 'reactstrap';
 import DPConnectorView from './components/DPConnectorView';
-import DPNode from './components/DPNode';
-import logo from './logo.svg';
-import kafka from './assets/kafka.svg';
-import datalake from './assets/nosqldb.svg';
-import memsql from './assets/db.svg';
-import server from './assets/server.svg';
-import arrow from './assets/arrow.svg';
+import Timer from './components/Timer';
+import Landingpage from './components/Landingpage';
+import { subscribeToData } from './api';
 import DPNodeView from './components/DPNodeView';
-
-import Arrow from './components/arrow/Arrow';
-import DBIcon from './components/dbIcon/DBIcon';
-import KafkaIcon from './components/kafkaIcon/KafkaIcon';
-import IReadyIcon from './components/iReadyIcon/IReadyIcon';
-import NoSqlIcon from './components/noSqlIcon/NoSqlIcon';
-import ServerIcon from './components/serverIcon/ServerIcon';
-
-import { subscribeToTimer, subscribeToData } from './api';
 import 'bootstrap/dist/css/bootstrap.css'
 import './App.css';
 
@@ -29,8 +17,6 @@ const connectors = [
 class App extends Component {
 
   state = {
-    displayConnectors: false,
-    timestamp: 0,
     data: null
   }
 
@@ -40,29 +26,24 @@ class App extends Component {
       this.setState({ data: payload });
       console.log(payload)
     });
-    subscribeToTimer((err, timestamp) => this.setState({timestamp}));
   }
-
-  _handleDrillDown = () => {
-    this.setState({displayConnectors: true});
-  }
-
-  _handleDrillUp = () => {
-    this.setState({displayConnectors: false});
-  }
-
+  
   render() {
-    const {timestamp, data} = this.state;
+    const { data} = this.state;
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">DATA PLATFORM DASHBOARD {timestamp}</h1>
+          <h1 className="App-title">
+            DATA PLATFORM DASHBOARD
+            <Timer />
+          </h1>
         </header>
         <Container>
-          {this.state.displayConnectors ?
-            <DPConnectorView connectors={connectors} onDrillUp={this._handleDrillUp} /> :
-            <DPNodeView onDrillDown={this._handleDrillDown} />
-          }
+          <Switch>
+            <Route path="/" exact component={Landingpage} />
+            <Route path="/data-platform" component={DPNodeView}/>
+            <Route path="/kafka" component={DPConnectorView} />
+          </Switch>
         </Container>
         <footer className="App-footer">
           <p>{JSON.stringify(data)}</p>
