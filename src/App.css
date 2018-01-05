@@ -232,3 +232,14 @@
   float: left;
   width: 100px;
 }
+
+.DPConnectorLogo:hover {
+    cursor: pointer;
+}
+
+.DPTopicsText:hover {
+    cursor: pointer;
+}
+.alert-text {
+  font-size: .75em;
+}

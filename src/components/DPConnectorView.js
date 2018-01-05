@@ -22,6 +22,7 @@ class DPConnectorView extends Component {
     const { swimlanesData } = this.props;
     const db = _.get(swimlanesData.databases, swimlane.databaseKey);
     const source = _.get(swimlanesData.connector_summaries, swimlane.sourceConnectorKey);
+    console.log('source', source);
     const sink = _.get(swimlanesData.connector_summaries, swimlane.sinkConnectorKey);
     const group  = _.get(swimlanesData.topic_groups, swimlane.topicGroupKey);
     
@@ -29,11 +30,11 @@ class DPConnectorView extends Component {
       <div className="dp-connectors-row" key={swimlane.topicGroupKey} >
         { db ? <DPDatabase name={db.name} host={db.host} /> : <div className="empty-div" /> }
         { db ? <DPArrow /> : <div className="empty-div" /> }
-        { source ? <DPConnector name={source.dispName} image={sourceImage} /> : <div className="empty-div" /> }
+        { source ? <DPConnector connector={source} image={sourceImage} /> : <div className="empty-div" /> }
         { source ? <DPArrow /> : <div className="empty-div" /> }
         <DPTopics group={group} message={swimlane.warnMessage} name={swimlane.topicGroupKey} />
         { sink ? <DPArrow /> : <div className="empty-div" /> }
-        { sink ? <DPConnector name={sink.dispName} image={sinkImage} /> : <div className="empty-div" /> }
+        { sink ? <DPConnector connector={sink} image={sinkImage} /> : <div className="empty-div" /> }
       </div>
     );
   };
