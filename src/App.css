@@ -213,3 +213,50 @@ div.login-form {
   transform: rotate(32deg);
   vertical-align: middle;
 }
+
+.dbIcons {
+  margin: 0 auto;
+}
+
+.serverIcons {
+  margin: 0 auto;
+}
+
+#top > div, #mid > div, #bottom > div {
+  width: 200px;
+  height: 200px;
+  float: left;
+}
+
+/*#mid > div {
+  width: 200px;
+  height: 200px;
+  float: left;
+}*/
+
+#arrow {
+  float: left;
+  width: 100px;
+}
+
+#kafka {
+  /*width: 800px;*/
+  display: inline-block;
+}
+
+#ready {
+  display: inline-block;
+  float: left;
+  width: 100px;
+}
+
+.DPConnectorLogo:hover {
+    cursor: pointer;
+}
+
+.DPTopicsText:hover {
+    cursor: pointer;
+}
+.alert-text {
+  font-size: .75em;
+}
