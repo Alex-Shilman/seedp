@@ -4,15 +4,17 @@
  }
 }
 
-.arrow-head,
+.arrow-line,.arrow-head{
+    fill:none;
+    stroke:#231f20;
+    stroke-miterlimit:10;
+    stroke-width:6px;
+}
+.arrow-line{
+    stroke-dasharray:15;
+}
 
 .arrow-line {
-  fill:none;
-  stroke:#231f20;
-  stroke-miterlimit:10;
-  }
-
-  .arrow-head {
-    /*-webkit-animation: dash 30s reverse linear infinite;*/
-    stroke-dasharray:6;
-  }
+  -webkit-animation: dash 30s reverse linear infinite;
+  stroke-dasharray:15;
+}

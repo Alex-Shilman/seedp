@@ -63,7 +63,7 @@
   height: 500px;
   display: inline-block;
   position: absolute;
-  left: 300px;
+  left: 100px;
   top: 120px;
 }
 
@@ -183,10 +183,6 @@
   transform: rotate(180deg);
 }
 
-#mid .col2-spacer {
-  width: 400px;
-}
-
 .arrow-rotate32 {
   -webkit-transform: rotate(32deg);
   -moz-transform: rotate(32deg);
@@ -194,41 +190,4 @@
   -ms-transform: rotate(32deg);
   transform: rotate(32deg);
   vertical-align: middle;
-}
-
-
-.dbIcons {
-  margin: 0 auto;
-}
-
-.serverIcons {
-  margin: 0 auto;
-}
-
-#top > div, #mid > div, #bottom > div {
-  width: 200px;
-  height: 200px;
-  float: left;
-}
-
-/*#mid > div {
-  width: 200px;
-  height: 200px;
-  float: left;
-}*/
-
-#arrow {
-  float: left;
-  width: 100px;
-}
-
-#kafka {
-  /*width: 800px;*/
-  display: inline-block;
-}
-
-#ready {
-  display: inline-block;
-  float: left;
-  width: 100px;
 }
