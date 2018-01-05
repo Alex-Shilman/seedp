@@ -5,7 +5,7 @@ class DPConnector extends Component {
     return (
       <div className="DPConnector">
         <img src={this.props.image} alt="" width="80" height="80" />
-        <p>{this.props.name}</p>
+        <p className="connector-text">{this.props.name}</p>
       </div>
     );
   }

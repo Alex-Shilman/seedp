@@ -20,11 +20,11 @@ class DPTopics extends Component {
 
   render() {
     const { group, message, name } = this.props;
-    const buttonId = `${name}-btn`;
+    const buttonId = `${name}-topics-btn`;
     return (
       <div className="DPTopics">
         <img src={pipe} alt="" />
-        <p className="topic-text"><br/><Button  id={buttonId} onClick={this.toggle}>Topic Group:<br/>{group.dispName}</Button></p>
+        <p className="topic-text"><br/><br/><Button  id={buttonId} onClick={this.toggle}>{group.dispName}</Button></p>
         <p className="error-text">{message}</p>
         <Popover placement="left" isOpen={this.state.popoverOpen} target={buttonId} toggle={this.toggle}>
           <PopoverHeader>Topics in Group</PopoverHeader>
