@@ -49,15 +49,23 @@ section.landing {
   -o-background-size: cover;
   background-size: cover;  font-family: Georgia, 'Times New Roman', Times, serif;
   height: 1000px;
+  padding: 20px;
+}
+
+div.logo {
+  color: #d4e67c;
+  font-size: 2em;
+  padding: 10px;
 }
 
 div.login-form {
   background-color: #234071;
   position: absolute;
+  font-size: 1em !important;
   top: 120px;
   left: 120px;
-  width: 240px;
-  height: 240px;
+  width: 260px;
+  height: 320px;
   padding: 10px;
   box-shadow: 5px 10px #879bbd;
   border-radius: 25px;
@@ -76,9 +84,15 @@ div.login-form {
   top: 180px;
 }
 
-.login-field {
+.login-label {
   color: #ffffff;
   font-size: 1em;
+}
+
+.login-field {
+  color: #000000;
+  font-size: 1em;
+  height: 30px;
 }
 
 .DPNodeView {
