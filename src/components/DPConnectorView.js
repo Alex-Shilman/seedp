@@ -20,20 +20,32 @@ class DPConnectorView extends Component {
     loadData({test: 1});
   }
 
+  _renderConnector = (htdc, source) => {
+    let component;
+    if (htdc) {
+      component = ( <div className="htdc-connector">HTDC</div> );
+    } else if (source) {
+      component = ( <DPConnector connector={source} image={sourceImage} /> );
+    } else {
+      component = ( <div className="empty-div" /> );
+    }
+    return component;
+  }
+
   _renderConnectorRow = (swimlane) => {
     const { swimlanesData } = this.props;
     const db = _.get(swimlanesData.databases, swimlane.databaseKey);
     const source = _.get(swimlanesData.connector_summaries, swimlane.sourceConnectorKey);
-    console.log('source', source);
     const sink = _.get(swimlanesData.connector_summaries, swimlane.sinkConnectorKey);
     const group  = _.get(swimlanesData.topic_groups, swimlane.topicGroupKey);
-    
+    const htdc = group ? group.htdc : false;
+
     return (
       <div className="dp-connectors-row" key={swimlane.topicGroupKey} >
         { db ? <DPDatabase name={db.name} host={db.host} /> : <div className="empty-div" /> }
         { db ? <Arrow /> : <div className="empty-div" /> }
-        { source ? <DPConnector connector={source} image={sourceImage} /> : <div className="empty-div" /> }
-        { source ? <Arrow /> : <div className="empty-div" /> }
+        { this._renderConnector(htdc, source) }
+        { source || htdc ? <Arrow /> : <div className="empty-div" /> }
         { group ? <DPTopics group={group} message={swimlane.warnMessage} name={swimlane.topicGroupKey} /> : <div className="empty-div" /> }
         { sink ? <Arrow /> : <div className="empty-div" /> }
         { sink ? <DPConnector connector={sink} image={sinkImage} /> : <div className="empty-div" /> }
@@ -46,6 +58,7 @@ class DPConnectorView extends Component {
     return (
       <div className="DPConnectorView">
         <button onClick={history.goBack}>Back</button>
+        <br/><br/>
         {
           loading ? 'Loading...' : (
             <div className="dp-connectors-container">

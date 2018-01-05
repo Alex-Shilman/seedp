@@ -29,7 +29,7 @@ class App extends Component {
           <section>
             <header className="App-header">
               <h1 className="App-title">
-                DATA PLATFORM DASHBOARD
+               NINTENDO DASHBOARD{' '}
                 <Timer />
               </h1>
             </header>

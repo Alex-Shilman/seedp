@@ -95,6 +95,14 @@ div.login-form {
   height: 30px;
 }
 
+.htdc-connector {
+  font-size: 3em;
+  vertical-align: middle;
+  text-align: center;
+  height: 120px;
+  line-height: 120px;
+}
+
 .DPNodeView {
   padding: 10px;
 }
@@ -136,12 +144,16 @@ div.login-form {
   padding: 10px;
   width: 120px;
   height: 120px;
+  /* border: 2px solid red; */
+  vertical-align: middle;
 }
 
 .DPArrow {
   display: table-cell;
   padding: 10px;
   width: 100px;
+  /* border: 2px solid red; */
+  vertical-align: middle;
   /*height: auto;*/
 }
 
@@ -160,6 +172,7 @@ div.login-form {
   display: table-row;
   padding: 5px;
   height: auto;
+  border: 2px solid black;
 }
 
 .DPConnector {
@@ -170,6 +183,8 @@ div.login-form {
   padding: 10px;
   /* border: 2px solid red;
   border-radius: 25px; */
+  vertical-align: middle;
+  horizontal-align: center;
 }
 
 .DPTopics {
@@ -180,18 +195,21 @@ div.login-form {
   padding: 10px;
   /* border: 2px solid blue; */
   position: relative;
+  vertical-align: middle;
 }
 
 .empty-div {
   display: table-cell;
+  /* border: 2px solid red; */
 }
 
 .topic-text {
-  font-size: 0.8em;
-  position: absolute;
-  top: 0;
-  margin-left: 20px;
-  margin-right: 60px;
+  font-size: 0.75em;
+}
+
+.button-style {
+  font-size: 1em;
+  height: 30px;
 }
 
 .connector-text {
