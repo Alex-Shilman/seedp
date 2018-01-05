@@ -1,6 +1,7 @@
 .kafkaIcons {
   text-transform: uppercase;
-  width: 200px;
+  width: 198px;
+  display: inline-block;
 }
 .kafka-logo.healthy,.kafka-text.healthy{
     fill:#2bb673;
