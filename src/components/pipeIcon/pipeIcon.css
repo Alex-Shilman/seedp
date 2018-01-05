@@ -1,0 +1,19 @@
+.pipe-color.healthy{
+    fill:#2bb673;
+}
+
+.pipe-color.warning{
+    fill:#e35761;
+}
+
+.pipe-ellipse,.pipe-outline{
+    fill:none;
+    stroke:#231f20;
+    stroke-miterlimit:10;
+}
+.pipe-ellipse{
+    stroke-width:3px;
+}
+.pipe-outline{
+    stroke-width:6px;
+}

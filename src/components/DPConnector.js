@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ConnectorIcon from './connectorIcon/ConnectorIcon';
 
 class DPConnector extends Component {
   render() {
