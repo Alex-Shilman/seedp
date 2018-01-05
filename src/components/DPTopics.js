@@ -25,8 +25,8 @@ class DPTopics extends Component {
     const buttonId = `${name}-topics-btn`;
     return (
       <div className="DPTopics">
+        <p className="topic-text"><Button id={buttonId} className="button-style" onClick={this.toggle}>{group.dispName}</Button></p>
         <PipeIcon status={message ? 'warning' : 'healthy'}/>
-        <p className="topic-text"><br/><br/><Button  id={buttonId} onClick={this.toggle}>{group.dispName}</Button></p>
         <p className="error-text">{message}</p>
         <Popover placement="left" isOpen={this.state.popoverOpen} target={buttonId} toggle={this.toggle}>
           <PopoverHeader>Topics in Group</PopoverHeader>
