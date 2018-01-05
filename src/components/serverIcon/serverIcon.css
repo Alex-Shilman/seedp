@@ -1,0 +1,24 @@
+.serverIcons {
+  text-transform: uppercase;
+  width: 100px;
+}
+
+.server-color.healthy,.server-label.healthy,.server-status.healthy{
+  fill:#2bb673;
+}
+
+.server-color.warning,.server-label.warning,.server-status.warning{
+  fill:#e35761;
+}
+.server-lines{
+    fill:#231f20;
+}
+.server-label{
+    font-size:18px;
+}
+.server-label,.server-status{
+    font-family:Futura;
+}
+.server-status{
+    font-size:18px;
+}

@@ -51,7 +51,7 @@
   white-space: nowrap;
   position: absolute;
   left: 50px;
-  top: 180px;  
+  top: 180px;
 }
 
 .DPNodeView {
@@ -61,11 +61,10 @@
 .iready {
   width: 80px;
   height: 500px;
-  background-color: #f47969;
   display: inline-block;
   position: absolute;
-  left: 50px;
-  top: 120px;  
+  left: 300px;
+  top: 120px;
 }
 
 .dp-nodes {
@@ -91,6 +90,13 @@
   height: 120px;
 }
 
+.DPDatabase {
+  display: table-cell;
+  padding: 10px;
+  width: 120px;
+  height: 120px;
+}
+
 .DPArrow {
   display: table-cell;
   padding: 10px;
@@ -104,7 +110,7 @@
 }
 
 .dp-connectors-container {
-  width: 90%;
+  width: 100%;
   display: table;
   padding: 5px;
 }
@@ -140,16 +146,20 @@
 }
 
 .topic-text {
-  font-size: 1em;
+  font-size: 0.8em;
   position: absolute;
   top: 0;
   margin-left: 20px;
   margin-right: 60px;
 }
 
+.connector-text {
+  font-size: 0.75em;
+}
+
 .error-text {
   color: red;
-  font-size: 1em;
+  font-size: 0.75em;
 }
 
 .arrow-style {
@@ -171,4 +181,54 @@
   -o-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+
+#mid .col2-spacer {
+  width: 400px;
+}
+
+.arrow-rotate32 {
+  -webkit-transform: rotate(32deg);
+  -moz-transform: rotate(32deg);
+  -o-transform: rotate(32deg);
+  -ms-transform: rotate(32deg);
+  transform: rotate(32deg);
+  vertical-align: middle;
+}
+
+
+.dbIcons {
+  margin: 0 auto;
+}
+
+.serverIcons {
+  margin: 0 auto;
+}
+
+#top > div, #mid > div, #bottom > div {
+  width: 200px;
+  height: 200px;
+  float: left;
+}
+
+/*#mid > div {
+  width: 200px;
+  height: 200px;
+  float: left;
+}*/
+
+#arrow {
+  float: left;
+  width: 100px;
+}
+
+#kafka {
+  /*width: 800px;*/
+  display: inline-block;
+}
+
+#ready {
+  display: inline-block;
+  float: left;
+  width: 100px;
 }

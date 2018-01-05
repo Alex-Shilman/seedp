@@ -1,0 +1,16 @@
+.noSqlIcons {
+  font-size:18px;
+  font-family:Futura;
+  text-transform: uppercase;
+  width: 100px;
+}
+.noSql-color.healthy,.noSql-label.healthy,.noSql-status.healthy{
+    fill:#2bb673;
+}
+
+.noSql-color.warning,.noSql-label.warning,.noSql-status.warning{
+    fill:#e35761;
+}
+.noSql-lines{
+    fill:#231f20;
+}

@@ -1,0 +1,15 @@
+.kafkaIcons {
+  text-transform: uppercase;
+  width: 200px;
+}
+.kafka-logo.healthy,.kafka-text.healthy{
+    fill:#2bb673;
+}
+
+.kafka-logo.warning,.kafka-text.warning{
+    fill:#e35761;
+}
+.kafka-text{
+    font-size:18px;
+    font-family:Futura;
+}

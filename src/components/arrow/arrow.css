@@ -1,0 +1,18 @@
+@-webkit-keyframes dash {
+ to {
+   stroke-dashoffset: 800;
+ }
+}
+
+.arrow-head,
+.arrow-line {
+    fill:none;
+    stroke:#231f20;
+    stroke-miterlimit:10;
+    stroke-width:2px;
+  }
+
+  .arrow-head {
+    /*-webkit-animation: dash 30s reverse linear infinite;*/
+    stroke-dasharray:6;
+  }
