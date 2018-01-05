@@ -1,4 +1,5 @@
 .serverIcons {
+  display: inline-block;
   text-transform: uppercase;
   width: 100px;
 }
@@ -22,3 +23,8 @@
 .server-status{
     font-size:18px;
 }
+
+/*.serverIcons #Layer_1 {
+  display: inline-block;
+  width: 100px;
+}*/
