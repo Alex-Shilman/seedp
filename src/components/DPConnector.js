@@ -20,18 +20,23 @@ class DPConnector extends Component {
 
   render() {
   	const { connector } = this.props;
-  	console.log('connector', connector);
-
-    return (
-      <div className="DPConnector">
+  	const { modal } = this.state;
+  	
+  return (
+    <div className="DPConnector">
       <div className="DPConnectorLogo" onClick={this.toggle}>
-      	<ConnectorIcon />
+          <ConnectorIcon />
         {connector.dispName}
       </div>
-      <DPConnectorDetails connectorJson={connector} modal={this.state.modal} toggle={this.toggle}/> 
-	  
-	  </div>
-    );
+      {
+        modal
+          && <DPConnectorDetails
+              connectorJson={connector}
+              modal={modal}
+              toggle={this.toggle}/>
+      }
+    </div>
+  );
   }
 }
 
