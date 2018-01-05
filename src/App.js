@@ -1,35 +1,27 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { Container } from 'reactstrap';
+import { connect } from 'react-redux';
 import DPConnectorView from './components/DPConnectorView';
 import Timer from './components/Timer';
+import Notification from './components/Notification';
 import Landingpage from './components/Landingpage';
 import { subscribeToData } from './api';
 import DPNodeView from './components/DPNodeView';
+import { notificationChannel } from './redux/actions';
 import 'bootstrap/dist/css/bootstrap.css'
 import './App.css';
 
-const connectors = [
-  { name: "iready_dbz" },
-  { name: "lessons_dbz" },
-];
-
 class App extends Component {
-
-  state = {
-    data: null
-  }
-
+  
   constructor(props) {
     super(props);
     subscribeToData((err, payload) => {
-      this.setState({ data: payload });
-      console.log(payload)
+      props.notify(payload);
     });
   }
   
   render() {
-    const { data} = this.state;
     return (
       <div className="App">
         <header className="App-header">
@@ -38,6 +30,7 @@ class App extends Component {
             <Timer />
           </h1>
         </header>
+        <Notification />
         <Container>
           <Switch>
             <Route path="/" exact component={Landingpage} />
@@ -45,11 +38,12 @@ class App extends Component {
             <Route path="/kafka" component={DPConnectorView} />
           </Switch>
         </Container>
-        <footer className="App-footer">
-          <p>{JSON.stringify(data)}</p>
-        </footer>
       </div>
     );
   }
 }
-export default App;
+
+const mapDispatchToProps = {
+  notify: notificationChannel
+}
+export default connect(null, mapDispatchToProps)(App);

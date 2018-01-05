@@ -14,7 +14,7 @@ import sourceImage from '../assets/source.svg';
 
 class DPConnectorView extends Component {
   componentWillMount() {
-    const { loadData } = this.props
+    const { loadData } = this.props;
     loadData({test: 1});
   }
 

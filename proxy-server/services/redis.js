@@ -14,8 +14,8 @@ process.on('message', msg => {
 
 function gatherData({counter}) {
   query({
-    command: 'SELECT * from tbl_node',
-    args: [],
+    command: 'SELECT * from tbl_node where ?? = ?',
+    args: ['env', 'nintendo'],
     callback: (error, response) => {
       const payload = JSON.stringify(response);
       if (error) {

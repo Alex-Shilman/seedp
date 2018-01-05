@@ -37,3 +37,10 @@ export const loadSwimlanes = ({params = {}} = {}) => {
     )
   }
 }
+
+export const notificationChannel = (payload) => {
+  return {
+    type: 'NOTIFICATION_BANNER',
+    payload: JSON.parse(payload)
+  }
+}

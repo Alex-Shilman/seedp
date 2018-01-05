@@ -11,6 +11,18 @@ const DEFAULT_STATE = {
   error: {}
 };
 
+const notification = (state = {}, action ) => {
+  switch (action.type) {
+    case 'NOTIFICATION_BANNER':
+      return {
+        ...state,
+        data: action.payload
+      }
+    default:
+      return state;
+  }
+}
+
 const kafkaData = (state = DEFAULT_STATE, action) => {
   switch (action.type) {
     case LOAD_DATA_REQUEST:
@@ -38,7 +50,8 @@ const kafkaData = (state = DEFAULT_STATE, action) => {
 }
 const createReducers = () =>
   combineReducers({
-    data: kafkaData
+    data: kafkaData,
+    notification: notification
   });
 
 export default createReducers;
