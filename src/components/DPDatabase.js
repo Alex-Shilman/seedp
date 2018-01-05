@@ -26,8 +26,8 @@ class DPDatabase extends Component {
     return (
       <div className="DPDatabase">
         {/* <img src={dbImage} width="120" height="100" /> */}
+        <p className="connector-text"><Button id={buttonId} className="button-style" onClick={this.toggle}>{name}</Button></p>
         <DBIcon status='healthy' />
-        <p className="connector-text"><Button  id={buttonId} onClick={this.toggle}>{name}</Button></p>
         <Popover placement="right" isOpen={this.state.popoverOpen} target={buttonId} toggle={this.toggle}>
           <PopoverHeader>Host</PopoverHeader>
           <PopoverBody>{host}</PopoverBody>

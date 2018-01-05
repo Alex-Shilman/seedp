@@ -31,7 +31,7 @@ class App extends Component {
           <div>
             <header className="App-header">
               <h1 className="App-title">
-                DATA PLATFORM DASHBOARD
+               NINTENDO DASHBOARD{' '}
                 <Timer />
               </h1>
             </header>
