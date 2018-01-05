@@ -19,7 +19,7 @@ class App extends Component {
     super(props);
     subscribeToData((err, payload) => {
       this.setState({ data: payload });
-      console.log(payload)
+      console.log('payload', payload)
     });
   }
   

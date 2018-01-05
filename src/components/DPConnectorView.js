@@ -8,7 +8,6 @@ import DPTopics from './DPTopics';
 import { loadSwimlanes } from '../redux/actions';
 import sinkImage from '../assets/sink.svg';
 import sourceImage from '../assets/source.svg';
-import classNames from 'classnames';
 import Arrow from './arrow/Arrow';
 
 // TODO: switch to this.props.data when ready
