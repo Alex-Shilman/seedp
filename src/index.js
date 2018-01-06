@@ -6,8 +6,19 @@ import './index.css';
 import App from './App';
 import configureStore from './redux/store';
 import registerServiceWorker from './registerServiceWorker';
+import { subscribeToData, subscribeToDataLevel2 } from './api';
+import { notificationChannel, loadKafkaUpdate } from './redux/actions';
 
 const store = configureStore({});
+
+subscribeToData((err, payload) => {
+  store.dispatch(notificationChannel(payload));
+});
+
+subscribeToDataLevel2((err, payload) => {
+  store.dispatch(loadKafkaUpdate(payload));
+});
+
 const root = document.getElementById('root');
 const AppWrapper = ({store}) => (
   <BrowserRouter>

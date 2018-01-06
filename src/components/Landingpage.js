@@ -9,7 +9,6 @@ export default () => (
       <div className="logo">
          <img src={logo} width="64px" height="64px" alt="" />{' '}seeDP
       </div>
-      <Link to="/kafka">SignOn</Link>
       <Form>
           <FormGroup>
             <Label className="login-label" for="exampleUsername">Username</Label>

@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import _ from 'lodash';
 import {
   LOAD_DATA_REQUEST,
   LOAD_DATA_SUCCESS,
@@ -8,8 +9,15 @@ import {
   LOAD_CONNECTOR_FAIL,
   LOAD_KAFKA_REQUEST,
   LOAD_KAFKA_SUCCESS,
+  LOAD_KAFKA_UPDATE,
   LOAD_KAFKA_FAIL,
 } from './actions';
+
+const parseResponse = (rows) =>
+  rows.reduce((composed, row) => {
+    composed[_.toLower(row.id)] = JSON.parse(row.json);
+    return composed;
+  }, {});
 
 const DEFAULT_STATE = {
   loading: false,
@@ -70,6 +78,11 @@ const kafkaData = (state = DEFAULT_STATE, action) => {
         loading: false,
         data: action.payload
       };
+    case LOAD_KAFKA_UPDATE:
+      return {
+        ...state,
+        data: parseResponse(action.payload)
+      };
     case LOAD_KAFKA_FAIL:
       return {
         ...state,
@@ -84,7 +97,7 @@ const kafkaData = (state = DEFAULT_STATE, action) => {
 const createReducers = () =>
   combineReducers({
     data: kafkaData,
-    notification: notification
+    notification: notification,
     connectors: connectors
   });
 

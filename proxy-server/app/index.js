@@ -41,9 +41,11 @@ redisClient.on('error', log('redis error'));
 redisClient.on('end', log('redis ended'));
 
 const cp = fork(`${__dirname}/../services/redis`);
+const cp2 = fork(`${__dirname}/../services/redis`);
 setInterval(() => {
   console.log(counter += 1);
-  cp.send({ type: 'data:start', counter })
+  cp.send({ type: 'data:start', counter });
+  cp2.send({ type: 'data:level2', counter });
 }, 3000);
 
 function log(type) {

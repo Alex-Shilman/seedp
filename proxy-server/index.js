@@ -9,10 +9,25 @@ const ProxyServer = Server.init({ app });
 const io = socketIo(ProxyServer);
 
 sub.subscribe('channel:data');
+sub.subscribe('channel:level2');
 
 io.on('connection', (client) => {
   sub.on('message', (channel, message) => {
-    client.emit('data', message);
+    switch (channel) {
+      case 'channel:data':
+        console.log('channel:data');
+        client.emit('data', message);
+        break;
+      case 'channel:level2':
+        console.log('channel:level2');
+        client.emit('data:level2', message);
+        break;
+      default:
+        console.log('Invalid channel');
+        throw new Error(`Invalid channel ${channel}`);
+        
+    }
+    
   });
   client.on('subscribeToTimer', (interval) => {
     console.log('client is subscribing to timer with interval ', interval);
