@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import classNames from 'classnames';
+import React from 'react';
 import './iReadyIcon.css';
 
 const IReadyIcon = () => (
