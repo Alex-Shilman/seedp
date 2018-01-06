@@ -44,21 +44,6 @@ function gatherData({counter}) {
         console.log('Error', error);
       } else {
         pubsub('node:data', 'channel:data', payload, () => counter === 1);
-        // pub.get('node:data', (err, data) => {
-        //   console.log('data here ==>', data);
-        //   if(err) {
-        //     console.log('error here', err, data);
-        //   } else {
-        //     if (counter === 1 || data !== payload) {
-        //       console.log('sending payload');
-        //       pub.set('node:data', payload);
-        //       pub.publish('channel:data', payload);
-        //     } else {
-        //       console.log('data is the same');
-        //       return;
-        //     }
-        //   }
-        // });
       }
       
     }
