@@ -41,7 +41,7 @@ class DPTopics extends Component {
         <Popover className="topic-popover" placement="left" isOpen={this.state.popoverOpen} target={topicsId} toggle={this.toggle}>
           <PopoverHeader>Topics in Group</PopoverHeader>
           <PopoverBody>
-            {group.topics.map(topic => ( <p>{topic}</p> )
+            {group.topics.map(topic => ( <p key={topic} >{topic}</p> )
             )}
           </PopoverBody>
         </Popover>
