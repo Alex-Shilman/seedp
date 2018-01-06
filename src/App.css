@@ -146,6 +146,7 @@ div.login-form {
   height: auto;
   /* border: 2px solid red; */
   vertical-align: middle;
+  border-top:solid black 1px;
 }
 
 .DPArrow {
@@ -173,7 +174,6 @@ div.login-form {
   padding: 5px;
   width: 100%;
   height: auto;
-  border: 2px solid black;
 }
 
 .DPConnector {
@@ -186,6 +186,7 @@ div.login-form {
   border-radius: 25px; */
   vertical-align: middle;
   horizontal-align: center;
+  border-top:dashed black 1px;
 }
 
 .DPTopics {
@@ -197,11 +198,17 @@ div.login-form {
   /* border: 2px solid blue; */
   position: relative;
   vertical-align: middle;
+  border-top:dashed black 1px;
 }
 
 .empty-div {
   display: table-cell;
   /* border: 2px solid red; */
+  border-top:dashed black 1px;
+}
+
+.dashed-border {
+  border-top:dashed black 1px;
 }
 
 .topic-text {

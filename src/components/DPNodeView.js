@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
 import Arrow from './arrow/Arrow';
 import DBIcon from './dbIcon/DBIcon';
 import KafkaIcon from './kafkaIcon/KafkaIcon';

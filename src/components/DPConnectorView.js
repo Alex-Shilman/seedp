@@ -10,9 +10,6 @@ import sinkImage from '../assets/sink.svg';
 import sourceImage from '../assets/source.svg';
 import Arrow from './arrow/Arrow';
 
-// TODO: switch to this.props.data when ready
-// import swimlanesData from './swimlanes';
-
 class DPConnectorView extends Component {
   componentWillMount() {
     const { loadData } = this.props;
@@ -22,7 +19,7 @@ class DPConnectorView extends Component {
   _renderConnector = (htdc, source) => {
     let component;
     if (htdc) {
-      component = ( <div className="htdc-connector">HTDC</div> );
+      component = ( <div className="htdc-connector dashed-border">HTDC</div> );
     } else if (source) {
       component = ( <DPConnector connector={source} image={sourceImage} /> );
     } else {
@@ -42,11 +39,11 @@ class DPConnectorView extends Component {
     return (
       <div className="dp-connectors-row" key={swimlane.topicGroupKey} >
         { db ? <DPDatabase name={db.name} host={db.host} /> : <div className="empty-div" /> }
-        { db ? <Arrow /> : <div className="empty-div" /> }
+        { db ? <Arrow dashedBorder="dashed-border" /> : <div className="empty-div" /> }
         { this._renderConnector(htdc, source) }
-        { source || htdc ? <Arrow /> : <div className="empty-div" /> }
+        { source || htdc ? <Arrow dashedBorder="dashed-border"/> : <div className="empty-div" /> }
         { group ? <DPTopics group={group} message={swimlane.warnMessage} name={swimlane.topicGroupKey} /> : <div className="empty-div" /> }
-        { sink ? <Arrow /> : <div className="empty-div" /> }
+        { sink ? <Arrow dashedBorder="dashed-border" /> : <div className="empty-div" /> }
         { sink ? <DPConnector connector={sink} image={sinkImage} /> : <div className="empty-div" /> }
       </div>
     );

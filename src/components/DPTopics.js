@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { Button, Popover, PopoverHeader, PopoverBody } from 'reactstrap';
-import warning from '../assets/warning.png';
-
 import PipeIcon from './pipeIcon/PipeIcon';
 
 class DPTopics extends Component {
@@ -32,13 +30,12 @@ class DPTopics extends Component {
 
   render() {
     const { group, message, name } = this.props;
-    console.log('group', group);
     const topicsId = `${name}-topics-btn`;
     const warningId = `${name}-warning-btn`;
     return (
       <div className="DPTopics">
         <p className="topic-text">
-          <Button id={topicsId} className="button-style" color="primary" onClick={this.toggle}>{group.dispName}</Button>
+        <Button id={topicsId} className="button-style" color="primary" onClick={this.toggle}>{group.dispName}</Button>
         </p>
         <PipeIcon status={message ? 'warning' : 'healthy'}/>
         <Popover className="topic-popover" placement="left" isOpen={this.state.popoverOpen} target={topicsId} toggle={this.toggle}>
