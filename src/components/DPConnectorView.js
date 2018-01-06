@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import DPDatabase from './DPDatabase';
 import DPConnector from './DPConnector';
+import GoBack from './GoBack';
 import DPTopics from './DPTopics';
 import { loadSwimlanes } from '../redux/actions';
 import sinkImage from '../assets/sink.svg';
@@ -52,8 +53,7 @@ class DPConnectorView extends Component {
     const { history, swimlanesData, loading } = this.props;
     return (
       <div className="DPConnectorView">
-        <button onClick={history.goBack}>Back</button>
-        <br/><br/>
+        <GoBack width={70} height={200} onClick={history.goBack}/>
         {
           loading ? 'Loading...' : (
             <div className="dp-connectors-container">

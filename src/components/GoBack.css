@@ -1,0 +1,42 @@
+button.goBack {
+-webkit-appearance: none;
+background: transparent;
+border: 0;
+outline:0!important;
+}
+
+.goBack svg {
+    padding: 5px;
+}
+
+.goBack.arrow {
+    cursor: pointer;
+    position: fixed;
+    left:0;
+    top: 50%;
+    width: 70px;
+    height: 90px;
+}
+
+/*.goBack.left {*/
+    /*left: 42%;*/
+/*}*/
+
+/*.right {*/
+    /*left: 58%;*/
+/*}*/
+
+.goBack.left:hover polyline,
+.goBack.left:focus polyline {
+    stroke-width: 3;
+}
+
+.goBack.left:active polyline {
+    stroke-width: 6;
+    transition: all 100ms ease-in-out;
+}
+
+
+.goBack polyline {
+    transition: all 250ms ease-in-out;
+}

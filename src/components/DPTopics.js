@@ -38,7 +38,7 @@ class DPTopics extends Component {
         <Button id={topicsId} className="button-style" color="primary" onClick={this.toggle}>{group.dispName}</Button>
         </p>
         <PipeIcon status={message ? 'warning' : 'healthy'}/>
-        <Popover className="topic-popover" placement="left" isOpen={this.state.popoverOpen} target={topicsId} toggle={this.toggle}>
+        <Popover className="animated topic-popover" placement="left" isOpen={this.state.popoverOpen} target={topicsId} toggle={this.toggle}>
           <PopoverHeader>Topics in Group</PopoverHeader>
           <PopoverBody>
             <ol>
@@ -50,7 +50,7 @@ class DPTopics extends Component {
           <Button id={warningId} color="danger" className="button-style" onClick={this.toggleWarning} >!</Button>
         }
         { message &&
-          <Popover className="warning-popover" placement="bottom" isOpen={this.state.warningOpen} target={warningId} toggle={this.toggleWarning}>
+          <Popover className="animated warning-popover" placement="bottom" isOpen={this.state.warningOpen} target={warningId} toggle={this.toggleWarning}>
             <PopoverHeader>Warning Message</PopoverHeader>
             <PopoverBody>
               {message}

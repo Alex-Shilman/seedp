@@ -12,8 +12,12 @@ export default class Timer extends Component {
   
   render() {
     const { timestamp } = this.state;
+    const { ...ownProps } = this.props;
     return (
-      <span style={{padding:5}}>{timestamp}</span>
+      <span
+        {...ownProps}>
+        {timestamp}
+      </span>
     )
   }
 }

@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 import { connect } from 'react-redux';
-import { Alert } from 'reactstrap';
+import { Alert, Collapse, Button, CardBody, Card } from 'reactstrap';
+
+const messages = {
+  caution: 'Caution!!! Something is wrong with the system',
+  warning: 'Warning!!! Somethingis wrong with the system',
+  success: 'The system is back to normal'
+}
 
 const mapStatusToColor = (data) => {
   return {
@@ -12,15 +18,20 @@ const mapStatusToColor = (data) => {
 
 class Notification extends Component {
   state = {
-    isVisible: false
+    isVisible: false,
+    showMore: false
   }
   
   componentWillReceiveProps(nextProps) {
     if (this.props.data !== nextProps.data) {
       this.setState({
-        isVisible: true
+        isVisible: true,
       })
     }
+  }
+  
+  _toggleShowMore = () => {
+    this.setState((state) => ({showMore: !state.showMore}));
   }
   
   _handleToggle = () => {
@@ -32,17 +43,31 @@ class Notification extends Component {
     const { data } = this.props;
     const { isCaution, isWarning } = mapStatusToColor(data);
     const color = isCaution ? 'danger' : (isWarning ? 'warning' : 'success');
+    const message = isCaution ? messages.caution : (isWarning ? messages.warning : messages.success);
     
     return (
       <Alert
+        className="notification animated flipInX"
         isOpen={isVisible}
         toggle={this._handleToggle}
         color={color}>
-        <ul>
-        {
-          (data && data.length) && data.map(item => (<li key={item.name}>{item.name}  -  <strong>{item.state}</strong>  -  {item.last_updated}</li>))
-        }
-        </ul>
+        {message}
+        <div>
+          <span
+            onClick={this._toggleShowMore}
+            style={{color: 'blue', cursor: 'pointer'}}>
+            Show More ...
+          </span>
+          <Collapse isOpen={this.state.showMore}>
+            <Card style={{background: 'transparent'}}>
+              <CardBody>
+                <ul>
+                {(data && data.length) && data.map(item => (<li key={item.name}>{item.name}  -  <strong>{item.state}</strong>  -  {item.last_updated}</li>))}
+              </ul>
+              </CardBody>
+            </Card>
+          </Collapse>
+        </div>
       </Alert>
     );
   }
