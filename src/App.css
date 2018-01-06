@@ -142,8 +142,8 @@ div.login-form {
 .DPDatabase {
   display: table-cell;
   padding: 10px;
-  width: 120px;
-  height: 120px;
+  width: auto;
+  height: auto;
   /* border: 2px solid red; */
   vertical-align: middle;
 }
@@ -171,6 +171,7 @@ div.login-form {
 .dp-connectors-row {
   display: table-row;
   padding: 5px;
+  width: 100%;
   height: auto;
   border: 2px solid black;
 }
@@ -178,7 +179,7 @@ div.login-form {
 .DPConnector {
   display: table-cell;
   padding: 3px;
-  width: 100px;
+  width: auto;
   height: auto;
   padding: 10px;
   /* border: 2px solid red;
@@ -190,7 +191,7 @@ div.login-form {
 .DPTopics {
   display: table-cell;
   padding: 3px;
-  width: 200px;
+  width: auto;
   height: auto;
   padding: 10px;
   /* border: 2px solid blue; */
@@ -204,7 +205,7 @@ div.login-form {
 }
 
 .topic-text {
-  font-size: 0.75em;
+  font-size: 0.9em;
 }
 
 .button-style {
@@ -213,7 +214,8 @@ div.login-form {
 }
 
 .connector-text {
-  font-size: 0.75em;
+  font-size: 0.9em;
+  white-space: nowrap;
 }
 
 .error-text {

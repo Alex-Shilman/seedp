@@ -25,13 +25,15 @@ class DPDatabase extends Component {
     const buttonId = `${host}-host-btn`;
     return (
       <div className="DPDatabase">
-        {/* <img src={dbImage} width="120" height="100" /> */}
-        <p className="connector-text"><Button id={buttonId} className="button-style" onClick={this.toggle}>{name}</Button></p>
+        { /*<p className="connector-text"><Button id={buttonId} className="button-style" onClick={this.toggle}>{name}</Button></p> */}
+        { /*<p className="connector-text"><Button id={buttonId} className="button-style" onClick={this.toggle}>{name}</Button></p> */}
         <DBIcon status='healthy' />
-        <Popover placement="right" isOpen={this.state.popoverOpen} target={buttonId} toggle={this.toggle}>
+        <p className="connector-text">{name}</p>
+        <p className="connector-text">{host}</p>
+        { /*<Popover placement="right" isOpen={this.state.popoverOpen} target={buttonId} toggle={this.toggle}>
           <PopoverHeader>Host</PopoverHeader>
           <PopoverBody>{host}</PopoverBody>
-        </Popover>
+        </Popover> */}
       </div>
     );
   }
