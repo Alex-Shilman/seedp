@@ -11,11 +11,16 @@ function subscribeToData(cb) {
   socket.on('data', payload => cb(null, payload));
 }
 
+function subscribeToDataLevel2(cb) {
+  socket.on('data:level2', payload => cb(null, payload));
+}
+
 function JsonRPC(url, payload) {
   return axios.post(url, payload);
 }
 export {
   subscribeToTimer,
   subscribeToData,
+  subscribeToDataLevel2,
   JsonRPC
 };

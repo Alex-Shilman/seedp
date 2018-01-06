@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-
+proxy-server/dump.rdb
 # testing
 /coverage
 
@@ -19,3 +19,4 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.idea/workspace.xml
