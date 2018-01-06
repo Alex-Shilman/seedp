@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import DPArrow from './DPArrow';
 import DPDatabase from './DPDatabase';
 import DPConnector from './DPConnector';
 import DPTopics from './DPTopics';
