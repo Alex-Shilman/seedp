@@ -1,25 +1,15 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { Container } from 'reactstrap';
-import { connect } from 'react-redux';
 import DPConnectorView from './components/DPConnectorView';
 import Timer from './components/Timer';
 import Notification from './components/Notification';
 import Landingpage from './components/Landingpage';
-import { subscribeToData } from './api';
 import DPNodeView from './components/DPNodeView';
-import { notificationChannel } from './redux/actions';
 import 'bootstrap/dist/css/bootstrap.css'
 import './App.css';
 
-class App extends Component {
-  
-  constructor(props) {
-    super(props);
-    subscribeToData((err, payload) => {
-      props.notify(payload);
-    });
-  }
+export default class App extends Component {
   
   render() {
     return (
@@ -45,7 +35,3 @@ class App extends Component {
   }
 }
 
-const mapDispatchToProps = {
-  notify: notificationChannel
-}
-export default connect(null, mapDispatchToProps)(App);

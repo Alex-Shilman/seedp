@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { Button, Popover, PopoverHeader, PopoverBody } from 'reactstrap';
-import dbImage from '../assets/db.svg';
-
 import DBIcon from './dbIcon/DBIcon';
 
 class DPDatabase extends Component {
@@ -22,6 +20,8 @@ class DPDatabase extends Component {
 
   render() {
     const { name, host } = this.props;
+    /*const uuid = (((1+Math.random())*0x10000)|0).toString(16).substring(1);
+    console.log('uuid', uuid);*/
     const buttonId = `${host}-host-btn`;
     return (
       <div className="DPDatabase">
