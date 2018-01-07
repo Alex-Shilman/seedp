@@ -40,7 +40,12 @@ toggleCollapse() {
 		const fullDetails = Object.keys(connector.fullConfig).map(key => (
 			<div><b>{key}:</b> {connector.fullConfig[key]}<br/></div>))
 		return (
-			<Modal className="animated zoomIn" isOpen={modal} toggle={toggle}>
+
+			<Modal
+				className="animated zoomIn"
+				isOpen={modal}
+				toggle={toggle}
+				style={{width: '100%'}}>
 				<ModalHeader toggle={toggle}>{connector.dispName}</ModalHeader>
 				{
 					(connectorsLoading) ? 'loading...'
