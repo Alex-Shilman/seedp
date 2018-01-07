@@ -402,3 +402,20 @@ div.login-form {
 .topic-popover {
   width: 800px;
 }
+
+.toggle-button {
+  background-color: transparent;
+  color: blue;
+  text-align: right;
+  border: transparent;
+  text-decoration:underline;
+}
+
+.toggle-button:hover {
+  cursor: pointer;
+}
+.toggle-button:focus {outline:0;}
+
+.toggle-text {
+  border: transparent;
+}
