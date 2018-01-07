@@ -1,35 +1,31 @@
 import React, { Component } from 'react';
-import { Button, Popover, PopoverHeader, PopoverBody } from 'reactstrap';
+import { Button, Popover, PopoverHeader, PopoverBody, Collapse } from 'reactstrap';
 import PipeIcon from './pipeIcon/PipeIcon';
+import DPTopicDetail from './DPTopicDetail';
 
 class DPTopics extends Component {
-  constructor(props) {
-    super(props);
-
-    this.toggle = this.toggle.bind(this);
-    this.toggleWarning = this.toggleWarning.bind(this);
-    this.state = {
-      popoverOpen: false,
-      warningOpen: false
-    };
+  state = {
+    popoverOpen: false,
+    warningOpen: false,
   }
 
-  toggle() {
-    this.setState({
-      popoverOpen: !this.state.popoverOpen,
-      warningOpen: this.state.warningOpen
-    });
+  toggle = () => {
+    this.setState(({popoverOpen, warningOpen}) => ({
+      popoverOpen: !popoverOpen,
+      warningOpen: warningOpen
+    }));
   }
-
-  toggleWarning() {
-    this.setState({
-      popoverOpen: this.state.popoverOpen,
-      warningOpen: !this.state.warningOpen
-    });
+  
+  toggleWarning = () => {
+    this.setState(({popoverOpen, warningOpen}) => ({
+      popoverOpen: popoverOpen,
+      warningOpen: !warningOpen
+    }));
   }
 
   render() {
     const { group, message, name } = this.props;
+    const { showMoreTopics, popoverOpen, warningOpen } = this.state;
     const topicsId = `${name}-topics-btn`;
     const warningId = `${name}-warning-btn`;
     return (
@@ -38,19 +34,24 @@ class DPTopics extends Component {
         <Button id={topicsId} className="button-style" color="primary" onClick={this.toggle}>{group.dispName}</Button>
         </p>
         <PipeIcon status={message ? 'warning' : 'healthy'}/>
-        <Popover className="animated topic-popover" placement="left" isOpen={this.state.popoverOpen} target={topicsId} toggle={this.toggle}>
-          <PopoverHeader>Topics in Group</PopoverHeader>
-          <PopoverBody>
-            <ol>
-              {group.topics.map(topic => ( <li key={topic} >{topic}</li> ) )}
-            </ol>
-          </PopoverBody>
-        </Popover>
+        <DPTopicDetail
+          className="topic-popover animated zoomIn"
+          placement="left"
+          isOpen={popoverOpen}
+          target={topicsId}
+          toggle={this.toggle}
+          group={group}
+        />
         { message && 
           <Button id={warningId} color="danger" className="button-style" onClick={this.toggleWarning} >!</Button>
         }
         { message &&
-          <Popover className="animated warning-popover" placement="bottom" isOpen={this.state.warningOpen} target={warningId} toggle={this.toggleWarning}>
+          <Popover
+            className="warning-popover animated zoomIn"
+            placement="bottom"
+            isOpen={warningOpen}
+            target={warningId}
+            toggle={this.toggleWarning}>
             <PopoverHeader>Warning Message</PopoverHeader>
             <PopoverBody>
               {message}

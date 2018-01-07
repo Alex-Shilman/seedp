@@ -14,17 +14,15 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <Switch>
-          <Route path="/" exact component={Landingpage} />
-          <section>
-            <Header />
-            <Notification />
-            <Container>
-              <Route path="/data-platform" component={DPNodeView}/>
-              <Route path="/kafka" component={DPConnectorView} />
-            </Container>
-          </section>
-        </Switch>
+        <Route path="/" exact component={Landingpage} />
+        <section>
+          <Header />
+          <Notification />
+          <Container>
+            <Route path="/data-platform" component={DPNodeView}/>
+            <Route path="/kafka" component={DPConnectorView} />
+          </Container>
+        </section>
       </div>
     );
   }

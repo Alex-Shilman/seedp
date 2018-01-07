@@ -22,7 +22,11 @@ class DPConnectorDetails extends Component {
 		console.log('swimlanesData ==>', swimlanesData);
 		console.log('connectorsData ==>', connectorsData);
 		return (
-			<Modal className="animated zoomIn" isOpen={modal} toggle={toggle}>
+			<Modal
+				className="animated zoomIn"
+				isOpen={modal}
+				toggle={toggle}
+				style={{width: '100%'}}>
 				<ModalHeader toggle={toggle}>{connectorJson.dispName}</ModalHeader>
 				{
 					(connectorsLoading) ? 'loading...'

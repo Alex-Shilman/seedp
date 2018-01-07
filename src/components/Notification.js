@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 import { connect } from 'react-redux';
-import { Alert, Collapse, Button, CardBody, Card } from 'reactstrap';
+import { Alert, Collapse, CardBody, Card } from 'reactstrap';
 
 const messages = {
   caution: 'Caution!!! Something is wrong with the system',
-  warning: 'Warning!!! Somethingis wrong with the system',
+  warning: 'Alert!!! Something is wrong with the system',
   success: 'The system is back to normal'
 }
 
@@ -31,7 +31,7 @@ class Notification extends Component {
   }
   
   _toggleShowMore = () => {
-    this.setState((state) => ({showMore: !state.showMore}));
+    this.setState(({showMore}) => ({showMore: !showMore}));
   }
   
   _handleToggle = () => {
@@ -39,10 +39,10 @@ class Notification extends Component {
   }
   
   render() {
-    const { isVisible } = this.state;
+    const { isVisible, showMore } = this.state;
     const { data } = this.props;
     const { isCaution, isWarning } = mapStatusToColor(data);
-    const color = isCaution ? 'danger' : (isWarning ? 'warning' : 'success');
+    const color = isWarning ? 'danger' : (isCaution ? 'warning' : 'success');
     const message = isCaution ? messages.caution : (isWarning ? messages.warning : messages.success);
     
     return (
@@ -53,20 +53,16 @@ class Notification extends Component {
         color={color}>
         {message}
         <div>
-          <span
-            onClick={this._toggleShowMore}
-            style={{color: 'blue', cursor: 'pointer'}}>
-            Show More ...
-          </span>
-          <Collapse isOpen={this.state.showMore}>
-            <Card style={{background: 'transparent'}}>
-              <CardBody>
-                <ul>
-                {(data && data.length) && data.map(item => (<li key={item.name}>{item.name}  -  <strong>{item.state}</strong>  -  {item.last_updated}</li>))}
-              </ul>
-              </CardBody>
-            </Card>
+          <Collapse isOpen={showMore}>
+            <ul>
+              {(data && data.length) && data.map(item => (<li key={item.name}>{item.name}  -  <strong>{item.state}</strong>  -  {item.last_updated}</li>))}
+            </ul>
           </Collapse>
+          <span onClick={this._toggleShowMore} style={{color: 'blue', cursor: 'pointer'}}>
+            {
+              (!showMore) ? 'Show More +' : 'Show Less -'
+            }
+          </span>
         </div>
       </Alert>
     );
