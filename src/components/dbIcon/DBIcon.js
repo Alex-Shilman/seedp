@@ -14,7 +14,7 @@ class DBIcon extends Component {
             <path className="dbIcon-lines" d="M731.4,396.62c-3.1,2.48-10.76,5.59-14,5.28v5c4.66-.31,11.9-3.21,14-5.28v-5Z" transform="translate(-620.75 -281.42)" />
             <path className="dbIcon-lines" d="M731.4,421.46c-3.1,2.48-10.76,5.59-14,5.28v5c4.66-.31,11.9-3.21,14-5.28v-5Z" transform="translate(-620.75 -281.42)" />
             {this.props.name && <text className={classNames('dbIcon-label', this.props.status)} transform="translate(19.58 24.68)">{this.props.name}</text>}
-            <text className={classNames('dbIcon-status', this.props.status)} transform="translate(20 199.68)">{this.props.status}!</text>
+            <text className={classNames('dbIcon-status', this.props.status)} transform="translate(20 199.68)">{this.props.status}</text>
         </svg>
       </div>
     );
