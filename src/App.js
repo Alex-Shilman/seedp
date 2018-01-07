@@ -7,7 +7,8 @@ import Landingpage from './components/Landingpage';
 import Header from './components/Header';
 import DPNodeView from './components/DPNodeView';
 
-import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/css/bootstrap.css';
+import 'animate.css/animate.css';
 import './App.css';
 
 export default class App extends Component {
