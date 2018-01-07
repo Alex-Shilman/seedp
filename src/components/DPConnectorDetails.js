@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Collapse, Button, CardBody, Card, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import {Collapse, CardBody, Card, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { connect } from 'react-redux';
 import { loadConnectors } from '../redux/actions';
 import _ from 'lodash';

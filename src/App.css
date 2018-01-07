@@ -392,13 +392,11 @@ div.login-form {
   color: blue;
   text-align: right;
   border: transparent;
-  outline:0;
+  text-decoration:underline;
 }
 
 .toggle-button:hover {
-  background-color: transparent;
   cursor: pointer;
-  color: blue;
 }
 .toggle-button:focus {outline:0;}
 
