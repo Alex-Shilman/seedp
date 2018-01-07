@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Popover, PopoverHeader, PopoverBody, Collapse } from 'reactstrap';
+import { Button, Popover, PopoverHeader, PopoverBody } from 'reactstrap';
 import PipeIcon from './pipeIcon/PipeIcon';
 import DPTopicDetail from './DPTopicDetail';
 
@@ -25,7 +25,7 @@ class DPTopics extends Component {
 
   render() {
     const { group, message, name } = this.props;
-    const { showMoreTopics, popoverOpen, warningOpen } = this.state;
+    const { popoverOpen, warningOpen } = this.state;
     const topicsId = `${name}-topics-btn`;
     const warningId = `${name}-warning-btn`;
     return (

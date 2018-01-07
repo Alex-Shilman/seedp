@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { Container } from 'reactstrap';
 import DPConnectorView from './components/DPConnectorView';
 import Notification from './components/Notification';
