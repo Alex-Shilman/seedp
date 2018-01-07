@@ -1,29 +1,25 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import DPArrow from './DPArrow';
 import DPDatabase from './DPDatabase';
 import DPConnector from './DPConnector';
+import GoBack from './GoBack';
 import DPTopics from './DPTopics';
 import { loadSwimlanes } from '../redux/actions';
 import sinkImage from '../assets/sink.svg';
 import sourceImage from '../assets/source.svg';
-import classNames from 'classnames';
 import Arrow from './arrow/Arrow';
-
-// TODO: switch to this.props.data when ready
-// import swimlanesData from './swimlanes';
 
 class DPConnectorView extends Component {
   componentWillMount() {
-    const { loadData } = this.props
+    const { loadData } = this.props;
     loadData({test: 1});
   }
 
   _renderConnector = (htdc, source) => {
     let component;
     if (htdc) {
-      component = ( <div className="htdc-connector">HTDC</div> );
+      component = ( <div className="htdc-connector dashed-border">HTDC</div> );
     } else if (source) {
       component = ( <DPConnector connector={source} image={sourceImage} /> );
     } else {
@@ -43,11 +39,11 @@ class DPConnectorView extends Component {
     return (
       <div className="dp-connectors-row" key={swimlane.topicGroupKey} >
         { db ? <DPDatabase name={db.name} host={db.host} /> : <div className="empty-div" /> }
-        { db ? <Arrow /> : <div className="empty-div" /> }
+        { db ? <Arrow dashedBorder="dashed-border" /> : <div className="empty-div" /> }
         { this._renderConnector(htdc, source) }
-        { source || htdc ? <Arrow /> : <div className="empty-div" /> }
+        { source || htdc ? <Arrow dashedBorder="dashed-border"/> : <div className="empty-div" /> }
         { group ? <DPTopics group={group} message={swimlane.warnMessage} name={swimlane.topicGroupKey} /> : <div className="empty-div" /> }
-        { sink ? <Arrow /> : <div className="empty-div" /> }
+        { sink ? <Arrow dashedBorder="dashed-border" /> : <div className="empty-div" /> }
         { sink ? <DPConnector connector={sink} image={sinkImage} /> : <div className="empty-div" /> }
       </div>
     );
@@ -57,8 +53,7 @@ class DPConnectorView extends Component {
     const { history, swimlanesData, loading } = this.props;
     return (
       <div className="DPConnectorView">
-        <button onClick={history.goBack}>Back</button>
-        <br/><br/>
+        <GoBack width={70} height={200} onClick={history.goBack}/>
         {
           loading ? 'Loading...' : (
             <div className="dp-connectors-container">

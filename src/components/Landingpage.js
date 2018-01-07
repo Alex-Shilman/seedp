@@ -1,14 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import logo from '../assets/system-config-services.png';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import Logo from './Logo';
 
 export default () => (
   <section className="landing">
     <div className="login-form">
-      <div className="logo">
-         <img src={logo} width="64px" height="64px" alt="" />{' '}seeDP
-      </div>
+      <Logo width="64px" height="64px" />
       <Form>
           <FormGroup>
             <Label className="login-label" for="exampleUsername">Username</Label>

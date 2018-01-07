@@ -1,6 +1,80 @@
 .App {
   text-align: center;
 }
+/* Animation */
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+/* flipInX */
+@keyframes flipInX {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  to {
+    transform: perspective(400px);
+  }
+}
+
+.flipInX {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  animation-name: flipInX;
+}
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    transform: scale3d(.9, .9, .9);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    transform: scale3d(.97, .97, .97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+  animation-name: bounceIn;
+}
+/*********/
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -9,6 +83,7 @@
 
 .App-header {
   background-color: #222;
+  position: relative;
   height: 60px;
   padding: 20px;
   color: white;
@@ -53,6 +128,7 @@ section.landing {
 }
 
 div.logo {
+  text-align:left;
   color: #d4e67c;
   font-size: 2em;
   padding: 10px;
@@ -142,10 +218,11 @@ div.login-form {
 .DPDatabase {
   display: table-cell;
   padding: 10px;
-  width: 120px;
-  height: 120px;
+  width: auto;
+  height: auto;
   /* border: 2px solid red; */
   vertical-align: middle;
+  border-top:solid black 1px;
 }
 
 .DPArrow {
@@ -171,40 +248,47 @@ div.login-form {
 .dp-connectors-row {
   display: table-row;
   padding: 5px;
+  width: 100%;
   height: auto;
-  border: 2px solid black;
 }
 
 .DPConnector {
   display: table-cell;
   padding: 3px;
-  width: 100px;
+  width: auto;
   height: auto;
   padding: 10px;
   /* border: 2px solid red;
   border-radius: 25px; */
   vertical-align: middle;
   horizontal-align: center;
+  border-top:dashed black 1px;
 }
 
 .DPTopics {
   display: table-cell;
   padding: 3px;
-  width: 200px;
+  width: auto;
   height: auto;
   padding: 10px;
   /* border: 2px solid blue; */
   position: relative;
   vertical-align: middle;
+  border-top:dashed black 1px;
 }
 
 .empty-div {
   display: table-cell;
   /* border: 2px solid red; */
+  border-top:dashed black 1px;
+}
+
+.dashed-border {
+  border-top:dashed black 1px;
 }
 
 .topic-text {
-  font-size: 0.75em;
+  font-size: 0.9em;
 }
 
 .button-style {
@@ -213,7 +297,8 @@ div.login-form {
 }
 
 .connector-text {
-  font-size: 0.75em;
+  font-size: 0.9em;
+  white-space: nowrap;
 }
 
 .error-text {
@@ -296,4 +381,8 @@ div.login-form {
 }
 .alert-text {
   font-size: .75em;
+}
+
+.topic-popover {
+  width: 800px;
 }

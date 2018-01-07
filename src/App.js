@@ -2,47 +2,30 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { Container } from 'reactstrap';
 import DPConnectorView from './components/DPConnectorView';
-import Timer from './components/Timer';
+import Notification from './components/Notification';
 import Landingpage from './components/Landingpage';
-import { subscribeToData } from './api';
+import Header from './components/Header';
 import DPNodeView from './components/DPNodeView';
+
 import 'bootstrap/dist/css/bootstrap.css'
 import './App.css';
 
-class App extends Component {
-
-  state = {
-    data: null
-  }
-
-  constructor(props) {
-    super(props);
-    subscribeToData((err, payload) => {
-      this.setState({ data: payload });
-      console.log(payload)
-    });
-  }
-  
+export default class App extends Component {
   render() {
     return (
       <div className="App">
         <Switch>
           <Route path="/" exact component={Landingpage} />
-          <div>
-            <header className="App-header">
-              <h1 className="App-title">
-               NINTENDO DASHBOARD{' '}
-                <Timer />
-              </h1>
-            </header>
+          <section>
+            <Header />
+            <Notification />
             <Container>
               <Route path="/data-platform" component={DPNodeView}/>
               <Route path="/kafka" component={DPConnectorView} />
             </Container>
-          </div>
+          </section>
         </Switch>
       </div>
     );
   }
 }
-export default App;

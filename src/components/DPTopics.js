@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { Button, Popover, PopoverHeader, PopoverBody } from 'reactstrap';
-import pipe from '../assets/pipe.svg';
-
 import PipeIcon from './pipeIcon/PipeIcon';
 
 class DPTopics extends Component {
@@ -9,29 +7,56 @@ class DPTopics extends Component {
     super(props);
 
     this.toggle = this.toggle.bind(this);
+    this.toggleWarning = this.toggleWarning.bind(this);
     this.state = {
-      popoverOpen: false
+      popoverOpen: false,
+      warningOpen: false
     };
   }
 
   toggle() {
     this.setState({
-      popoverOpen: !this.state.popoverOpen
+      popoverOpen: !this.state.popoverOpen,
+      warningOpen: this.state.warningOpen
+    });
+  }
+
+  toggleWarning() {
+    this.setState({
+      popoverOpen: this.state.popoverOpen,
+      warningOpen: !this.state.warningOpen
     });
   }
 
   render() {
     const { group, message, name } = this.props;
-    const buttonId = `${name}-topics-btn`;
+    const topicsId = `${name}-topics-btn`;
+    const warningId = `${name}-warning-btn`;
     return (
       <div className="DPTopics">
-        <p className="topic-text"><Button id={buttonId} className="button-style" onClick={this.toggle}>{group.dispName}</Button></p>
+        <p className="topic-text">
+        <Button id={topicsId} className="button-style" color="primary" onClick={this.toggle}>{group.dispName}</Button>
+        </p>
         <PipeIcon status={message ? 'warning' : 'healthy'}/>
-        <p className="error-text">{message}</p>
-        <Popover placement="left" isOpen={this.state.popoverOpen} target={buttonId} toggle={this.toggle}>
+        <Popover className="animated topic-popover" placement="left" isOpen={this.state.popoverOpen} target={topicsId} toggle={this.toggle}>
           <PopoverHeader>Topics in Group</PopoverHeader>
-          <PopoverBody>{group.topics.join(', ')}</PopoverBody>
+          <PopoverBody>
+            <ol>
+              {group.topics.map(topic => ( <li key={topic} >{topic}</li> ) )}
+            </ol>
+          </PopoverBody>
         </Popover>
+        { message && 
+          <Button id={warningId} color="danger" className="button-style" onClick={this.toggleWarning} >!</Button>
+        }
+        { message &&
+          <Popover className="animated warning-popover" placement="bottom" isOpen={this.state.warningOpen} target={warningId} toggle={this.toggleWarning}>
+            <PopoverHeader>Warning Message</PopoverHeader>
+            <PopoverBody>
+              {message}
+            </PopoverBody>
+          </Popover> 
+        }
       </div>
     );
   }
