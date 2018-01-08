@@ -54,6 +54,7 @@ class DPConnectorDetails extends Component {
 							<b>Status:</b> {connector.connectorStatusStr}<br/><br/>
 							<h5>Configuration:</h5>
 							{derivedDetails}
+							<br/>
 							<Collapse isOpen={collapse}>
 								<section>
 									<h5>Analytics:</h5>
