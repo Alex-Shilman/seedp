@@ -24,7 +24,7 @@ class DPTopics extends Component {
   }
 
   render() {
-    const { group, message, name } = this.props;
+    const { group, message, name, status } = this.props;
     const { popoverOpen, warningOpen } = this.state;
     const topicsId = `${name}-topics-btn`;
     const warningId = `${name}-warning-btn`;
@@ -33,7 +33,7 @@ class DPTopics extends Component {
         <p className="topic-text">
         <Button id={topicsId} className="button-style" color="primary" onClick={this.toggle}>{group.dispName}</Button>
         </p>
-        <PipeIcon status={message ? 'warning' : 'healthy'}/>
+        <PipeIcon status={status} />
         <DPTopicDetail
           className="topic-popover animated zoomIn"
           placement="left"

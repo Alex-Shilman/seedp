@@ -42,7 +42,7 @@ class DPConnectorView extends Component {
         { db ? <Arrow dashedBorder="dashed-border" /> : <div className="empty-div" /> }
         { this._renderConnector(htdc, source) }
         { source || htdc ? <Arrow dashedBorder="dashed-border"/> : <div className="empty-div" /> }
-        { group ? <DPTopics group={group} message={swimlane.warnMessage} name={swimlane.topicGroupKey} /> : <div className="empty-div" /> }
+        { group ? <DPTopics group={group} message={swimlane.warnMessage} name={swimlane.topicGroupKey} status={_.toLower(swimlane.status)} /> : <div className="empty-div" /> }
         { sink ? <Arrow dashedBorder="dashed-border" /> : <div className="empty-div" /> }
         { sink ? <DPConnector connector={sink} image={sinkImage} /> : <div className="empty-div" /> }
       </div>
