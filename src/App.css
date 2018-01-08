@@ -151,15 +151,16 @@ div.logo {
 }
 
 div.login-form {
-  background-color: #234071;
+  background-color: rgba(35, 64, 113, 0.61);
   position: absolute;
   font-size: 1em !important;
   top: 120px;
   left: 120px;
-  width: 260px;
-  height: 320px;
+  width: 330px;
+  height: 380px;
   padding: 10px;
-  box-shadow: 5px 10px #879bbd;
+  -webkit-box-shadow: 5px 10px #879bbd;
+  box-shadow: 5px 10px #879bbd7a;
   border-radius: 25px;
   border: 2px solid #234071;
 }
