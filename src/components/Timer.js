@@ -6,7 +6,7 @@ export default class Timer extends Component {
     timestamp: 0
   }
   
-  componentWillMount() {
+  componentDidMount() {
     subscribeToTimer((err, timestamp) => this.setState({timestamp}));
   }
   

@@ -38,6 +38,14 @@ const rpcHandlers = {
     },
   ],
   
+  'rpc/data_platform': [
+    {
+      type: 'local',
+      methods: ['getDataPlatform'],
+      handler: getData,
+    },
+  ],
+  
   'rpc/connectors': [
     {
       type: 'local',

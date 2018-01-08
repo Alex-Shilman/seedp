@@ -8,14 +8,16 @@ import KafkaIcon from './kafkaIcon/KafkaIcon';
 import IReadyIcon from './iReadyIcon/IReadyIcon';
 import NoSqlIcon from './noSqlIcon/NoSqlIcon';
 import ServerIcon from './serverIcon/ServerIcon';
+import { loadData } from '../redux/actions'
 
 class DPNodeView extends Component {
-  constructor(props) {
-    super(props);
-    this.getStatus = this.getStatus.bind(this);
-  };
-
-  getStatus() {
+  
+  componentWillMount() {
+    const { loadData } = this.props;
+    loadData({});
+  }
+  
+  getStatus = () => {
     const { data } = this.props;
     const status = {
       kafka: 'healthy',
@@ -46,6 +48,7 @@ class DPNodeView extends Component {
     
   render() {
     const status = this.getStatus();
+    console.log(status, this.props.data);
     return (
       <div className="DPNodeView">
         <IReadyIcon />
@@ -79,7 +82,11 @@ class DPNodeView extends Component {
 }
 
 const mapStateToProps = (globalState) => ({
-  data: globalState.notification.data
+  data: globalState.data_platform.data
 });
 
-export default connect(mapStateToProps, null)(DPNodeView);
+const mapDispatchToProps = {
+  loadData
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(DPNodeView);

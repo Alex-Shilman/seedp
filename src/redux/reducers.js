@@ -3,6 +3,7 @@ import _ from 'lodash';
 import {
   LOAD_DATA_REQUEST,
   LOAD_DATA_SUCCESS,
+  LOAD_DATA_UPDATE,
   LOAD_DATA_FAIL,
   LOAD_CONNECTOR_REQUEST,
   LOAD_CONNECTOR_SUCCESS,
@@ -11,6 +12,7 @@ import {
   LOAD_KAFKA_SUCCESS,
   LOAD_KAFKA_UPDATE,
   LOAD_KAFKA_FAIL,
+  NOTIFICATION_BANNER,
 } from './actions';
 
 const parseResponse = (rows) =>
@@ -27,7 +29,7 @@ const DEFAULT_STATE = {
 
 const notification = (state = {}, action ) => {
   switch (action.type) {
-    case 'NOTIFICATION_BANNER':
+    case NOTIFICATION_BANNER:
       return {
         ...state,
         data: action.payload
@@ -53,6 +55,37 @@ const connectors = (state = DEFAULT_STATE, action) => {
         data: action.payload
       };
     case LOAD_CONNECTOR_FAIL:
+      return {
+        ...state,
+        loading: false,
+        error: action.error,
+      };
+    default:
+      return state
+  }
+};
+
+const data_platform = (state = DEFAULT_STATE, action) => {
+  switch (action.type) {
+    case LOAD_DATA_REQUEST:
+      return {
+        ...state,
+        loadding: true,
+        error: {},
+        data: {}
+      };
+    case LOAD_DATA_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        data: action.payload
+      };
+    case LOAD_DATA_UPDATE:
+      return {
+        ...state,
+        data: action.payload
+      };
+    case LOAD_DATA_FAIL:
       return {
         ...state,
         loading: false,
@@ -96,6 +129,7 @@ const kafkaData = (state = DEFAULT_STATE, action) => {
 
 const createReducers = () =>
   combineReducers({
+    data_platform: data_platform,
     data: kafkaData,
     notification: notification,
     connectors: connectors

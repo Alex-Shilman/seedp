@@ -7,11 +7,12 @@ import App from './App';
 import configureStore from './redux/store';
 import registerServiceWorker from './registerServiceWorker';
 import { subscribeToData, subscribeToDataLevel2 } from './api';
-import { notificationChannel, loadKafkaUpdate } from './redux/actions';
+import { notificationChannel, loadKafkaUpdate, loadDataUpdate } from './redux/actions';
 
 const store = configureStore({});
 
 subscribeToData((err, payload) => {
+  store.dispatch(loadDataUpdate(payload))
   store.dispatch(notificationChannel(payload));
 });
 

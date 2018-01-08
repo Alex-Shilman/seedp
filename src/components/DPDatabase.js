@@ -2,19 +2,14 @@ import React, { Component } from 'react';
 import DBIcon from './dbIcon/DBIcon';
 
 class DPDatabase extends Component {
-  constructor(props) {
-    super(props);
+  state = {
+    popoverOpen: false
+  };
 
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      popoverOpen: false
-    };
-  }
-
-  toggle() {
-    this.setState({
-      popoverOpen: !this.state.popoverOpen
-    });
+  toggle = () => {
+    this.setState(({popoverOpen}) => ({
+      popoverOpen: !popoverOpen
+    }));
   }
 
   render() {

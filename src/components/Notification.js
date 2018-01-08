@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 import { connect } from 'react-redux';
-import { Alert, Collapse, CardBody, Card } from 'reactstrap';
+import { Alert, Collapse } from 'reactstrap';
 
 const messages = {
   caution: 'Caution!!! Something is wrong with the system',
