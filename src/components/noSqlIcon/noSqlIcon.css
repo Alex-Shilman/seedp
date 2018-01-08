@@ -3,6 +3,8 @@
   font-family:Futura;
   text-transform: uppercase;
   width: 100px;
+  position: relative;
+  left: 44px;
 }
 .noSql-color.healthy,.noSql-label.healthy,.noSql-status.healthy{
     fill:#2bb673;

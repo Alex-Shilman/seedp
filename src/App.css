@@ -192,8 +192,8 @@ div.login-form {
   font-size: 3em;
   vertical-align: middle;
   text-align: center;
-  height: 120px;
-  line-height: 120px;
+  height: 160px;
+  line-height: 150px;
 }
 
 .DPNodeView {
@@ -239,7 +239,7 @@ div.login-form {
   height: auto;
   /* border: 2px solid red; */
   vertical-align: middle;
-  border-top:solid black 1px;
+  border-bottom:solid lightgrey 1px;
 }
 
 .DPArrow {
@@ -279,7 +279,7 @@ div.login-form {
   border-radius: 25px; */
   vertical-align: middle;
   horizontal-align: center;
-  border-top:dashed black 1px;
+  border-bottom:dashed lightgrey 1px;
 }
 
 .DPTopics {
@@ -291,17 +291,17 @@ div.login-form {
   /* border: 2px solid blue; */
   position: relative;
   vertical-align: middle;
-  border-top:dashed black 1px;
+  border-bottom:dashed lightgrey 1px;
 }
 
 .empty-div {
   display: table-cell;
   /* border: 2px solid red; */
-  border-top:dashed black 1px;
+  border-bottom:dashed lightgrey 1px;
 }
 
 .dashed-border {
-  border-top:dashed black 1px;
+  border-bottom:dashed lightgrey 1px;
 }
 
 .topic-text {
@@ -374,7 +374,6 @@ div.login-form {
 }*/
 
 #arrow {
-  float: left;
   width: 100px;
 }
 
