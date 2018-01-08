@@ -402,3 +402,11 @@ div.login-form {
 .topic-popover {
   width: 800px;
 }
+
+.dp-connectors-row:last-child .DPDatabase,
+.dp-connectors-row:last-child .DPConnector,
+.dp-connectors-row:last-child .DPTopics,
+.dp-connectors-row:last-child .empty-div,
+.dp-connectors-row:last-child .dashed-border {
+  border-bottom: 0 !important;
+}
