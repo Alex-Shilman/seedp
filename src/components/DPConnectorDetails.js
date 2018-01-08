@@ -52,12 +52,12 @@ class DPConnectorDetails extends Component {
 							<b>Description:</b> {_.get(connectorData, 'description')}<br/>
 							{connector.database ? <div><b>Database:</b> {connector.database}<br/></div> : null}
 							<b>Status:</b> {connector.connectorStatusStr}<br/><br/>
-							<h5>Configuration:</h5>
+							<h5>Details:</h5>
 							{derivedDetails}
 							<br/>
 							<Collapse isOpen={collapse}>
 								<section>
-									<h5>Analytics:</h5>
+									<h5>Full Configuration:</h5>
 									{fullDetails}
 								</section>
 							</Collapse>
