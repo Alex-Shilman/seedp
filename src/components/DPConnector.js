@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import DPConnectorDetails from './DPConnectorDetails';
 import ConnectorIcon from './connectorIcon/ConnectorIcon';
@@ -25,7 +26,7 @@ class DPConnector extends Component {
   return (
     <div className="DPConnector">
       <div className="DPConnectorLogo" onClick={this.toggle}>
-          <ConnectorIcon />
+          <ConnectorIcon status={_.toLower(connector.status)} />
         {connector.dispName}
       </div>
       {

@@ -55,7 +55,7 @@ class Notification extends Component {
         <div>
           <Collapse isOpen={showMore}>
             <ul>
-              {(data && data.length) && data.map(item => (<li key={item.name}>{item.name}  -  <strong>{item.state}</strong>  -  {item.last_updated}</li>))}
+              {(data && data.length) && data.map(item => (<li key={item.name}>{item.name}  -  <strong>{item.state}</strong>s</li>))}
             </ul>
           </Collapse>
           <span onClick={this._toggleShowMore} style={{color: 'blue', cursor: 'pointer'}}>

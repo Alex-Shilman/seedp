@@ -36,7 +36,7 @@ function pubsub(redisKey, pubChannel, payload, boolExp) {
 
 function gatherData({counter}) {
   query({
-    command: 'SELECT * from tbl_node where ?? = ?',
+    command: 'SELECT id, name, env, state from tbl_node where ?? = ?',
     args: ['env', 'nintendo'],
     callback: (error, response) => {
       const payload = JSON.stringify(response);
