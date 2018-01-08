@@ -16,7 +16,7 @@ class DPDatabase extends Component {
     const { name, host } = this.props;
     return (
       <div className="DPDatabase">
-        <DBIcon status='healthy' />
+        <DBIcon status='static' />
         <p className="connector-text">{name}</p>
         <p className="connector-text">{host}</p>
       </div>

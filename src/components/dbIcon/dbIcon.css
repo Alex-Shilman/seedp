@@ -9,6 +9,10 @@
     fill:#231f20;
 }
 
+.dbIcon-label.healthy,.dbIcon-status.healthy,.dbIcon-color.static{
+    fill:#e4e2ea;
+}
+
 .dbIcon-label.healthy,.dbIcon-status.healthy,.dbIcon-color.healthy{
     fill:#2bb673;
 }
